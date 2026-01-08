@@ -1,0 +1,25 @@
+[0.255s] Invoking command in '/home/wy/RS/A3/ros2_ws/src/rs_a3_teleop': CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/wy/RS/A3/ros2_ws/build/rs_a3_teleop/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/wy/RS/A3/ros2_ws/install/rs_a3_teleop/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/rs_a3_teleop build --build-base /home/wy/RS/A3/ros2_ws/build/rs_a3_teleop/build install --record /home/wy/RS/A3/ros2_ws/build/rs_a3_teleop/install.log --single-version-externally-managed install_data
+[0.348s] running egg_info
+[0.348s] writing ../../build/rs_a3_teleop/rs_a3_teleop.egg-info/PKG-INFO
+[0.348s] writing dependency_links to ../../build/rs_a3_teleop/rs_a3_teleop.egg-info/dependency_links.txt
+[0.348s] writing entry points to ../../build/rs_a3_teleop/rs_a3_teleop.egg-info/entry_points.txt
+[0.348s] writing requirements to ../../build/rs_a3_teleop/rs_a3_teleop.egg-info/requires.txt
+[0.348s] writing top-level names to ../../build/rs_a3_teleop/rs_a3_teleop.egg-info/top_level.txt
+[0.349s] reading manifest file '../../build/rs_a3_teleop/rs_a3_teleop.egg-info/SOURCES.txt'
+[0.349s] writing manifest file '../../build/rs_a3_teleop/rs_a3_teleop.egg-info/SOURCES.txt'
+[0.350s] running build
+[0.350s] running build_py
+[0.350s] copying rs_a3_teleop/xbox_teleop_node.py -> /home/wy/RS/A3/ros2_ws/build/rs_a3_teleop/build/lib/rs_a3_teleop
+[0.350s] running install
+[0.350s] running install_lib
+[0.350s] copying /home/wy/RS/A3/ros2_ws/build/rs_a3_teleop/build/lib/rs_a3_teleop/xbox_teleop_node.py -> /home/wy/RS/A3/ros2_ws/install/rs_a3_teleop/lib/python3.10/site-packages/rs_a3_teleop
+[0.350s] byte-compiling /home/wy/RS/A3/ros2_ws/install/rs_a3_teleop/lib/python3.10/site-packages/rs_a3_teleop/xbox_teleop_node.py to xbox_teleop_node.cpython-310.pyc
+[0.354s] running install_data
+[0.354s] running install_egg_info
+[0.355s] removing '/home/wy/RS/A3/ros2_ws/install/rs_a3_teleop/lib/python3.10/site-packages/rs_a3_teleop-0.0.1-py3.10.egg-info' (and everything under it)
+[0.355s] Copying ../../build/rs_a3_teleop/rs_a3_teleop.egg-info to /home/wy/RS/A3/ros2_ws/install/rs_a3_teleop/lib/python3.10/site-packages/rs_a3_teleop-0.0.1-py3.10.egg-info
+[0.355s] running install_scripts
+[0.364s] Installing xbox_servo_teleop_node script to /home/wy/RS/A3/ros2_ws/install/rs_a3_teleop/lib/rs_a3_teleop
+[0.364s] Installing xbox_teleop_node script to /home/wy/RS/A3/ros2_ws/install/rs_a3_teleop/lib/rs_a3_teleop
+[0.364s] writing list of installed files to '/home/wy/RS/A3/ros2_ws/build/rs_a3_teleop/install.log'
+[0.376s] Invoked command in '/home/wy/RS/A3/ros2_ws/src/rs_a3_teleop' returned '0': CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/wy/RS/A3/ros2_ws/build/rs_a3_teleop/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/wy/RS/A3/ros2_ws/install/rs_a3_teleop/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/rs_a3_teleop build --build-base /home/wy/RS/A3/ros2_ws/build/rs_a3_teleop/build install --record /home/wy/RS/A3/ros2_ws/build/rs_a3_teleop/install.log --single-version-externally-managed install_data

@@ -1,0 +1,30 @@
+[0.131s] Invoking command in '/home/wy/RS/A3/ros2_ws/build/rs_a3_moveit_config': AMENT_PREFIX_PATH=/home/wy/RS/A3/ros2_ws/install/rs_a3_description:/home/wy/RS/A3/ros2_ws/install/rs_a3_hardware:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/wy/RS/A3/ros2_ws/install/rs_a3_description:/home/wy/RS/A3/ros2_ws/install/rs_a3_hardware:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) LD_LIBRARY_PATH=/home/wy/RS/A3/ros2_ws/install/rs_a3_hardware/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/wy/miniconda3/envs/rl_gpu/lib /usr/bin/cmake --build /home/wy/RS/A3/ros2_ws/build/rs_a3_moveit_config -- -j24 -l24
+[0.155s] Invoked command in '/home/wy/RS/A3/ros2_ws/build/rs_a3_moveit_config' returned '0': AMENT_PREFIX_PATH=/home/wy/RS/A3/ros2_ws/install/rs_a3_description:/home/wy/RS/A3/ros2_ws/install/rs_a3_hardware:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/wy/RS/A3/ros2_ws/install/rs_a3_description:/home/wy/RS/A3/ros2_ws/install/rs_a3_hardware:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) LD_LIBRARY_PATH=/home/wy/RS/A3/ros2_ws/install/rs_a3_hardware/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/wy/miniconda3/envs/rl_gpu/lib /usr/bin/cmake --build /home/wy/RS/A3/ros2_ws/build/rs_a3_moveit_config -- -j24 -l24
+[0.163s] Invoking command in '/home/wy/RS/A3/ros2_ws/build/rs_a3_moveit_config': AMENT_PREFIX_PATH=/home/wy/RS/A3/ros2_ws/install/rs_a3_description:/home/wy/RS/A3/ros2_ws/install/rs_a3_hardware:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/wy/RS/A3/ros2_ws/install/rs_a3_description:/home/wy/RS/A3/ros2_ws/install/rs_a3_hardware:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) LD_LIBRARY_PATH=/home/wy/RS/A3/ros2_ws/install/rs_a3_hardware/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/wy/miniconda3/envs/rl_gpu/lib /usr/bin/cmake --install /home/wy/RS/A3/ros2_ws/build/rs_a3_moveit_config
+[0.169s] -- Install configuration: ""
+[0.169s] -- Execute custom install script
+[0.170s] -- Up-to-date symlink: /home/wy/RS/A3/ros2_ws/install/rs_a3_moveit_config/share/rs_a3_moveit_config/config/joint_limits.yaml
+[0.170s] -- Up-to-date symlink: /home/wy/RS/A3/ros2_ws/install/rs_a3_moveit_config/share/rs_a3_moveit_config/config/kinematics.yaml
+[0.170s] -- Up-to-date symlink: /home/wy/RS/A3/ros2_ws/install/rs_a3_moveit_config/share/rs_a3_moveit_config/config/moveit.rviz
+[0.170s] -- Up-to-date symlink: /home/wy/RS/A3/ros2_ws/install/rs_a3_moveit_config/share/rs_a3_moveit_config/config/moveit_controllers.yaml
+[0.170s] -- Up-to-date symlink: /home/wy/RS/A3/ros2_ws/install/rs_a3_moveit_config/share/rs_a3_moveit_config/config/ompl_planning.yaml
+[0.170s] -- Up-to-date symlink: /home/wy/RS/A3/ros2_ws/install/rs_a3_moveit_config/share/rs_a3_moveit_config/config/rs_a3.srdf
+[0.170s] -- Symlinking: /home/wy/RS/A3/ros2_ws/install/rs_a3_moveit_config/share/rs_a3_moveit_config/config/servo_config.yaml
+[0.176s] -- Up-to-date symlink: /home/wy/RS/A3/ros2_ws/install/rs_a3_moveit_config/share/rs_a3_moveit_config/launch/demo.launch.py
+[0.176s] -- Up-to-date symlink: /home/wy/RS/A3/ros2_ws/install/rs_a3_moveit_config/share/rs_a3_moveit_config/launch/robot.launch.py
+[0.177s] -- Up-to-date symlink: /home/wy/RS/A3/ros2_ws/install/rs_a3_moveit_config/share/ament_index/resource_index/package_run_dependencies/rs_a3_moveit_config
+[0.177s] -- Up-to-date symlink: /home/wy/RS/A3/ros2_ws/install/rs_a3_moveit_config/share/ament_index/resource_index/parent_prefix_path/rs_a3_moveit_config
+[0.177s] -- Up-to-date symlink: /home/wy/RS/A3/ros2_ws/install/rs_a3_moveit_config/share/rs_a3_moveit_config/environment/ament_prefix_path.sh
+[0.177s] -- Up-to-date symlink: /home/wy/RS/A3/ros2_ws/install/rs_a3_moveit_config/share/rs_a3_moveit_config/environment/ament_prefix_path.dsv
+[0.177s] -- Up-to-date symlink: /home/wy/RS/A3/ros2_ws/install/rs_a3_moveit_config/share/rs_a3_moveit_config/environment/path.sh
+[0.179s] -- Up-to-date symlink: /home/wy/RS/A3/ros2_ws/install/rs_a3_moveit_config/share/rs_a3_moveit_config/environment/path.dsv
+[0.179s] -- Up-to-date symlink: /home/wy/RS/A3/ros2_ws/install/rs_a3_moveit_config/share/rs_a3_moveit_config/local_setup.bash
+[0.179s] -- Up-to-date symlink: /home/wy/RS/A3/ros2_ws/install/rs_a3_moveit_config/share/rs_a3_moveit_config/local_setup.sh
+[0.179s] -- Up-to-date symlink: /home/wy/RS/A3/ros2_ws/install/rs_a3_moveit_config/share/rs_a3_moveit_config/local_setup.zsh
+[0.179s] -- Up-to-date symlink: /home/wy/RS/A3/ros2_ws/install/rs_a3_moveit_config/share/rs_a3_moveit_config/local_setup.dsv
+[0.179s] -- Symlinking: /home/wy/RS/A3/ros2_ws/install/rs_a3_moveit_config/share/rs_a3_moveit_config/package.dsv
+[0.186s] -- Up-to-date symlink: /home/wy/RS/A3/ros2_ws/install/rs_a3_moveit_config/share/ament_index/resource_index/packages/rs_a3_moveit_config
+[0.186s] -- Up-to-date symlink: /home/wy/RS/A3/ros2_ws/install/rs_a3_moveit_config/share/rs_a3_moveit_config/cmake/rs_a3_moveit_configConfig.cmake
+[0.186s] -- Up-to-date symlink: /home/wy/RS/A3/ros2_ws/install/rs_a3_moveit_config/share/rs_a3_moveit_config/cmake/rs_a3_moveit_configConfig-version.cmake
+[0.186s] -- Up-to-date symlink: /home/wy/RS/A3/ros2_ws/install/rs_a3_moveit_config/share/rs_a3_moveit_config/package.xml
+[0.187s] Invoked command in '/home/wy/RS/A3/ros2_ws/build/rs_a3_moveit_config' returned '0': AMENT_PREFIX_PATH=/home/wy/RS/A3/ros2_ws/install/rs_a3_description:/home/wy/RS/A3/ros2_ws/install/rs_a3_hardware:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/wy/RS/A3/ros2_ws/install/rs_a3_description:/home/wy/RS/A3/ros2_ws/install/rs_a3_hardware:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) LD_LIBRARY_PATH=/home/wy/RS/A3/ros2_ws/install/rs_a3_hardware/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/wy/miniconda3/envs/rl_gpu/lib /usr/bin/cmake --install /home/wy/RS/A3/ros2_ws/build/rs_a3_moveit_config

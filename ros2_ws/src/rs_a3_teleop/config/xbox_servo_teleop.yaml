@@ -1,0 +1,22 @@
+# Xbox手柄伺服控制参数配置
+
+xbox_servo_teleop_node:
+  ros__parameters:
+    # 线性速度缩放因子 (m/s)
+    # 摇杆完全推到底时的最大速度
+    linear_scale: 0.1
+    
+    # 角速度缩放因子 (rad/s)
+    # 摇杆完全推到底时的最大角速度
+    angular_scale: 0.5
+    
+    # 坐标系
+    base_frame: "base_link"
+    
+    # 摇杆死区 (0-1)
+    deadzone: 0.1
+
+
+
+
+

@@ -1,0 +1,72 @@
+[0.000000] (-) TimerEvent: {}
+[0.000050] (-) JobUnselected: {'identifier': 'rs_a3_description'}
+[0.000065] (-) JobUnselected: {'identifier': 'rs_a3_description'}
+[0.000074] (-) JobUnselected: {'identifier': 'rs_a3_moveit_config'}
+[0.000079] (-) JobUnselected: {'identifier': 'rs_a3_teleop'}
+[0.000087] (rs_a3_hardware) JobQueued: {'identifier': 'rs_a3_hardware', 'dependencies': OrderedDict()}
+[0.000096] (rs_a3_hardware) JobStarted: {'identifier': 'rs_a3_hardware'}
+[0.005085] (rs_a3_hardware) JobProgress: {'identifier': 'rs_a3_hardware', 'progress': 'cmake'}
+[0.005792] (rs_a3_hardware) Command: {'cmd': ['/usr/bin/cmake', '/home/wy/RS/A3/ros2_ws/src/rs_a3_hardware', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/wy/RS/A3/install/rs_a3_hardware'], 'cwd': '/home/wy/RS/A3/build/rs_a3_hardware', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('VSCODE_CWD', '/home/wy'), ('VSCODE_ESM_ENTRYPOINT', 'vs/workbench/api/node/extensionHostProcess'), ('CONDA_PROMPT_MODIFIER', '(base)'), ('LANGUAGE', 'zh_CN:en'), ('USER', 'wy'), ('LC_TIME', 'en_US.UTF-8'), ('VSCODE_NLS_CONFIG', '{"userLocale":"zh-cn","osLocale":"zh-cn","resolvedLanguage":"zh-cn","defaultMessagesFile":"/usr/share/cursor/resources/app/out/nls.messages.json","languagePack":{"translationsConfigFile":"/home/wy/.config/Cursor/clp/3bfb7f1471a52e527cfc1587dd57c7c1.zh-cn/tcf.json","messagesFile":"/home/wy/.config/Cursor/clp/3bfb7f1471a52e527cfc1587dd57c7c1.zh-cn/20adc1003928b0f1b99305dbaf845656ff81f5d0/nls.messages.json","corruptMarkerFile":"/home/wy/.config/Cursor/clp/3bfb7f1471a52e527cfc1587dd57c7c1.zh-cn/corrupted.info"},"locale":"zh-cn","availableLanguages":{"*":"zh-cn"},"_languagePackId":"3bfb7f1471a52e527cfc1587dd57c7c1.zh-cn","_languagePackSupport":true,"_translationsConfigFile":"/home/wy/.config/Cursor/clp/3bfb7f1471a52e527cfc1587dd57c7c1.zh-cn/tcf.json","_cacheRoot":"/home/wy/.config/Cursor/clp/3bfb7f1471a52e527cfc1587dd57c7c1.zh-cn","_resolvedLanguagePackCoreLocation":"/home/wy/.config/Cursor/clp/3bfb7f1471a52e527cfc1587dd57c7c1.zh-cn/20adc1003928b0f1b99305dbaf845656ff81f5d0","_corruptedFile":"/home/wy/.config/Cursor/clp/3bfb7f1471a52e527cfc1587dd57c7c1.zh-cn/corrupted.info"}'), ('VSCODE_HANDLES_UNCAUGHT_ERRORS', 'true'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '0'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib::/home/wy/miniconda3/envs/rl_gpu/lib'), ('HOME', '/home/wy'), ('CHROME_DESKTOP', 'cursor.desktop'), ('CONDA_SHLVL', '1'), ('OLDPWD', '/home/wy/RS/A3'), ('DESKTOP_SESSION', 'ubuntu'), ('VSCODE_IPC_HOOK', '/run/user/1000/vscode-ffeb21a4-2.2.-main.sock'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/cursor.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('XDG_SEAT_PATH', '/org/freedesktop/DisplayManager/Seat0'), ('LC_MONETARY', 'en_US.UTF-8'), ('MANAGERPID', '1821'), ('SYSTEMD_EXEC_PID', '2014'), ('NO_COLOR', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('_CONDA_ROOT', '/home/wy/miniconda3'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '4319'), ('VSCODE_CRASH_REPORTER_PROCESS_TYPE', 'extensionHost'), ('VSCODE_L10N_BUNDLE_LOCATION', 'file:///home/wy/.cursor/extensions/ms-ceintl.vscode-language-pack-zh-hans-1.105.0-universal/translations/extensions/vscode.markdown-language-features.i18n.json'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'fcitx'), ('LOGNAME', 'wy'), ('FORCE_COLOR', '0'), ('JOURNAL_STREAM', '8:4582'), ('PULSE_SERVER', 'unix:/run/user/1000/pulse/native'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'dumb'), ('EVERYSPHERE_RIPGREP_PATH', '/usr/share/cursor/resources/app/node_modules/@vscode/ripgrep/bin/rg'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('COMPOSER_NO_INTERACTION', '1'), ('PATH', '/opt/ros/humble/bin:/home/wy/miniconda3/bin:/home/wy/miniconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/RS-wy:@/tmp/.ICE-unix/2014,unix/RS-wy:/tmp/.ICE-unix/2014'), ('GDM_LANG', 'zh_CN'), ('INVOCATION_ID', 'c6a3f89f6b454dbf918acce74c81da87'), ('PAPERSIZE', 'letter'), ('XDG_SESSION_PATH', '/org/freedesktop/DisplayManager/Session0'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'en_US.UTF-8'), ('VSCODE_PROCESS_TITLE', 'extension-host  [1-1]'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('CURSOR_AGENT', '1'), ('DISPLAY', ':0'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('LC_TELEPHONE', 'en_US.UTF-8'), ('XMODIFIERS', '@im=fcitx'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/home/wy/.Xauthority'), ('CURSOR_TRACE_ID', 'da48cbd846724de5baed2538453d3fa1'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('GSETTINGS_SCHEMA_DIR', '/home/wy/data'), ('XDG_GREETER_DATA_DIR', '/var/lib/lightdm-data/wy'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/wy/miniconda3/bin/python'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/bin/bash'), ('LC_NAME', 'en_US.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CONDA_DEFAULT_ENV', 'base'), ('LC_MEASUREMENT', 'en_US.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('_CONDA_EXE', '/home/wy/miniconda3/bin/conda'), ('LC_IDENTIFICATION', 'en_US.UTF-8'), ('QT_IM_MODULE', 'fcitx'), ('PWD', '/home/wy/RS/A3/build/rs_a3_hardware'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/wy/miniconda3/bin/conda'), ('VSCODE_CODE_CACHE_PATH', '/home/wy/.config/Cursor/CachedData/20adc1003928b0f1b99305dbaf845656ff81f5d0'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'en_US.UTF-8'), ('CONDA_PREFIX', '/home/wy/miniconda3'), ('LC_PAPER', 'en_US.UTF-8'), ('COLCON', '1'), ('_ZO_DOCTOR', '0'), ('VSCODE_PID', '4319'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.040675] (rs_a3_hardware) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.073999] (rs_a3_hardware) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.079186] (rs_a3_hardware) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.099144] (-) TimerEvent: {}
+[0.118969] (rs_a3_hardware) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.122111] (rs_a3_hardware) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.123111] (rs_a3_hardware) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.123816] (rs_a3_hardware) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.125251] (rs_a3_hardware) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.167282] (rs_a3_hardware) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.170880] (rs_a3_hardware) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.171002] (rs_a3_hardware) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.171272] (rs_a3_hardware) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.174458] (rs_a3_hardware) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.199229] (-) TimerEvent: {}
+[0.299373] (-) TimerEvent: {}
+[0.371091] (rs_a3_hardware) StdoutLine: {'line': b'-- Found Python3: /home/wy/miniconda3/bin/python3 (found version "3.13.11") found components: Interpreter \n'}
+[0.399478] (-) TimerEvent: {}
+[0.412494] (rs_a3_hardware) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[0.428004] (rs_a3_hardware) StdoutLine: {'line': b'-- Found rclcpp: 16.0.16 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[0.457544] (rs_a3_hardware) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.460720] (rs_a3_hardware) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.465594] (rs_a3_hardware) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.474488] (rs_a3_hardware) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.486150] (rs_a3_hardware) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.499576] (-) TimerEvent: {}
+[0.519078] (rs_a3_hardware) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.521089] (rs_a3_hardware) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.9 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.583444] (rs_a3_hardware) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[0.598547] (rs_a3_hardware) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[0.599631] (-) TimerEvent: {}
+[0.620094] (rs_a3_hardware) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[0.625881] (rs_a3_hardware) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[0.673266] (rs_a3_hardware) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[0.673808] (rs_a3_hardware) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[0.699732] (-) TimerEvent: {}
+[0.715312] (rs_a3_hardware) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[0.715917] (rs_a3_hardware) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[0.749400] (rs_a3_hardware) StdoutLine: {'line': b'-- Found rclcpp_lifecycle: 16.0.16 (/opt/ros/humble/share/rclcpp_lifecycle/cmake)\n'}
+[0.762412] (rs_a3_hardware) StdoutLine: {'line': b'-- Found hardware_interface: 2.52.2 (/opt/ros/humble/share/hardware_interface/cmake)\n'}
+[0.799849] (-) TimerEvent: {}
+[0.835201] (rs_a3_hardware) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[0.851749] (rs_a3_hardware) StderrLine: {'line': b'Traceback (most recent call last):\n'}
+[0.852631] (rs_a3_hardware) StderrLine: {'line': b'  File "/opt/ros/humble/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 22, in <module>\n'}
+[0.852672] (rs_a3_hardware) StderrLine: {'line': b'    from catkin_pkg.package import parse_package_string\n'}
+[0.852694] (rs_a3_hardware) StderrLine: {'line': b"ModuleNotFoundError: No module named 'catkin_pkg'\n"}
+[0.855340] (rs_a3_hardware) StderrLine: {'line': b'CMake Error at /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:95 (message):\n'}
+[0.855384] (rs_a3_hardware) StderrLine: {'line': b'  execute_process(/home/wy/miniconda3/bin/python3\n'}
+[0.855405] (rs_a3_hardware) StderrLine: {'line': b'  /opt/ros/humble/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py\n'}
+[0.855424] (rs_a3_hardware) StderrLine: {'line': b'  /home/wy/RS/A3/ros2_ws/src/rs_a3_hardware/package.xml\n'}
+[0.855441] (rs_a3_hardware) StderrLine: {'line': b'  /home/wy/RS/A3/build/rs_a3_hardware/ament_cmake_core/package.cmake)\n'}
+[0.855458] (rs_a3_hardware) StderrLine: {'line': b'  returned error code 1\n'}
+[0.855475] (rs_a3_hardware) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.855492] (rs_a3_hardware) StderrLine: {'line': b'  /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:49 (_ament_package_xml)\n'}
+[0.855508] (rs_a3_hardware) StderrLine: {'line': b'  /opt/ros/humble/share/ament_lint_auto/cmake/ament_lint_auto_find_test_dependencies.cmake:31 (ament_package_xml)\n'}
+[0.855524] (rs_a3_hardware) StderrLine: {'line': b'  CMakeLists.txt:60 (ament_lint_auto_find_test_dependencies)\n'}
+[0.855540] (rs_a3_hardware) StderrLine: {'line': b'\n'}
+[0.855556] (rs_a3_hardware) StderrLine: {'line': b'\n'}
+[0.855916] (rs_a3_hardware) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[0.855950] (rs_a3_hardware) StdoutLine: {'line': b'See also "/home/wy/RS/A3/build/rs_a3_hardware/CMakeFiles/CMakeOutput.log".\n'}
+[0.863338] (rs_a3_hardware) CommandEnded: {'returncode': 1}
+[0.874163] (rs_a3_hardware) JobEnded: {'identifier': 'rs_a3_hardware', 'rc': 1}
+[0.884427] (-) EventReactorShutdown: {}

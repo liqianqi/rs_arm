@@ -1,0 +1,58 @@
+[0.108s] Invoking command in '/home/wy/RS/A3/ros2_ws/build/rs_a3_description': AMENT_PREFIX_PATH=/home/wy/RS/A3/ros2_ws/install/rs_a3_hardware:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/wy/RS/A3/ros2_ws/install/rs_a3_hardware:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) LD_LIBRARY_PATH=/home/wy/RS/A3/ros2_ws/install/rs_a3_hardware/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/wy/miniconda3/envs/rl_gpu/lib /usr/bin/cmake --build /home/wy/RS/A3/ros2_ws/build/rs_a3_description -- -j24 -l24
+[0.130s] Invoked command in '/home/wy/RS/A3/ros2_ws/build/rs_a3_description' returned '0': AMENT_PREFIX_PATH=/home/wy/RS/A3/ros2_ws/install/rs_a3_hardware:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/wy/RS/A3/ros2_ws/install/rs_a3_hardware:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) LD_LIBRARY_PATH=/home/wy/RS/A3/ros2_ws/install/rs_a3_hardware/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/wy/miniconda3/envs/rl_gpu/lib /usr/bin/cmake --build /home/wy/RS/A3/ros2_ws/build/rs_a3_description -- -j24 -l24
+[0.137s] Invoking command in '/home/wy/RS/A3/ros2_ws/build/rs_a3_description': AMENT_PREFIX_PATH=/home/wy/RS/A3/ros2_ws/install/rs_a3_hardware:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/wy/RS/A3/ros2_ws/install/rs_a3_hardware:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) LD_LIBRARY_PATH=/home/wy/RS/A3/ros2_ws/install/rs_a3_hardware/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/wy/miniconda3/envs/rl_gpu/lib /usr/bin/cmake --install /home/wy/RS/A3/ros2_ws/build/rs_a3_description
+[0.141s] -- Install configuration: ""
+[0.141s] -- Execute custom install script
+[0.141s] -- Up-to-date symlink: /home/wy/RS/A3/ros2_ws/install/rs_a3_description/share/rs_a3_description/urdf/rs_a3.urdf.xacro
+[0.141s] -- Up-to-date symlink: /home/wy/RS/A3/ros2_ws/install/rs_a3_description/share/rs_a3_description/urdf/rs_a3_ros2_control.xacro
+[0.141s] -- Up-to-date symlink: /home/wy/RS/A3/ros2_ws/install/rs_a3_description/share/rs_a3_description/meshes/6705.stl
+[0.142s] -- Up-to-date symlink: /home/wy/RS/A3/ros2_ws/install/rs_a3_description/share/rs_a3_description/meshes/6705__2.stl
+[0.142s] -- Up-to-date symlink: /home/wy/RS/A3/ros2_ws/install/rs_a3_description/share/rs_a3_description/meshes/hand_r.stl
+[0.142s] -- Up-to-date symlink: /home/wy/RS/A3/ros2_ws/install/rs_a3_description/share/rs_a3_description/meshes/l1_base.stl
+[0.142s] -- Up-to-date symlink: /home/wy/RS/A3/ros2_ws/install/rs_a3_description/share/rs_a3_description/meshes/l1_link_drv.stl
+[0.142s] -- Up-to-date symlink: /home/wy/RS/A3/ros2_ws/install/rs_a3_description/share/rs_a3_description/meshes/l1_link_stop.stl
+[0.142s] -- Up-to-date symlink: /home/wy/RS/A3/ros2_ws/install/rs_a3_description/share/rs_a3_description/meshes/l2_stop.stl
+[0.142s] -- Up-to-date symlink: /home/wy/RS/A3/ros2_ws/install/rs_a3_description/share/rs_a3_description/meshes/l4_l5_link_back.stl
+[0.142s] -- Up-to-date symlink: /home/wy/RS/A3/ros2_ws/install/rs_a3_description/share/rs_a3_description/meshes/l4_l5_link_back__2.stl
+[0.142s] -- Up-to-date symlink: /home/wy/RS/A3/ros2_ws/install/rs_a3_description/share/rs_a3_description/meshes/l4_link_back.stl
+[0.142s] -- Up-to-date symlink: /home/wy/RS/A3/ros2_ws/install/rs_a3_description/share/rs_a3_description/meshes/l4_link_drv.stl
+[0.142s] -- Up-to-date symlink: /home/wy/RS/A3/ros2_ws/install/rs_a3_description/share/rs_a3_description/meshes/l5_shake.stl
+[0.142s] -- Up-to-date symlink: /home/wy/RS/A3/ros2_ws/install/rs_a3_description/share/rs_a3_description/meshes/mainlink_back.stl
+[0.142s] -- Up-to-date symlink: /home/wy/RS/A3/ros2_ws/install/rs_a3_description/share/rs_a3_description/meshes/mainlink_motor.stl
+[0.142s] -- Up-to-date symlink: /home/wy/RS/A3/ros2_ws/install/rs_a3_description/share/rs_a3_description/meshes/manifold_solid_brep_39_1.stl
+[0.142s] -- Up-to-date symlink: /home/wy/RS/A3/ros2_ws/install/rs_a3_description/share/rs_a3_description/meshes/manifold_solid_brep_39_1__2.stl
+[0.142s] -- Up-to-date symlink: /home/wy/RS/A3/ros2_ws/install/rs_a3_description/share/rs_a3_description/meshes/manifold_solid_brep_40_1.stl
+[0.142s] -- Up-to-date symlink: /home/wy/RS/A3/ros2_ws/install/rs_a3_description/share/rs_a3_description/meshes/part_1.stl
+[0.142s] -- Up-to-date symlink: /home/wy/RS/A3/ros2_ws/install/rs_a3_description/share/rs_a3_description/meshes/part_15.stl
+[0.142s] -- Up-to-date symlink: /home/wy/RS/A3/ros2_ws/install/rs_a3_description/share/rs_a3_description/meshes/part_2.stl
+[0.142s] -- Up-to-date symlink: /home/wy/RS/A3/ros2_ws/install/rs_a3_description/share/rs_a3_description/meshes/part_9.stl
+[0.142s] -- Up-to-date symlink: /home/wy/RS/A3/ros2_ws/install/rs_a3_description/share/rs_a3_description/meshes/rack__30_teeth.stl
+[0.142s] -- Up-to-date symlink: /home/wy/RS/A3/ros2_ws/install/rs_a3_description/share/rs_a3_description/meshes/rack__30_teeth__2.stl
+[0.142s] -- Up-to-date symlink: /home/wy/RS/A3/ros2_ws/install/rs_a3_description/share/rs_a3_description/meshes/rack_base.stl
+[0.142s] -- Up-to-date symlink: /home/wy/RS/A3/ros2_ws/install/rs_a3_description/share/rs_a3_description/meshes/rack_str.stl
+[0.143s] -- Up-to-date symlink: /home/wy/RS/A3/ros2_ws/install/rs_a3_description/share/rs_a3_description/meshes/rs00_l1.stl
+[0.143s] -- Up-to-date symlink: /home/wy/RS/A3/ros2_ws/install/rs_a3_description/share/rs_a3_description/meshes/rs00_l2.stl
+[0.143s] -- Up-to-date symlink: /home/wy/RS/A3/ros2_ws/install/rs_a3_description/share/rs_a3_description/meshes/rs00_l3.stl
+[0.143s] -- Up-to-date symlink: /home/wy/RS/A3/ros2_ws/install/rs_a3_description/share/rs_a3_description/meshes/rs05.stl
+[0.143s] -- Up-to-date symlink: /home/wy/RS/A3/ros2_ws/install/rs_a3_description/share/rs_a3_description/meshes/rs05_l4.stl
+[0.143s] -- Up-to-date symlink: /home/wy/RS/A3/ros2_ws/install/rs_a3_description/share/rs_a3_description/meshes/rs05_l5.stl
+[0.143s] -- Up-to-date symlink: /home/wy/RS/A3/ros2_ws/install/rs_a3_description/share/rs_a3_description/meshes/spur_gear__14_teeth.stl
+[0.143s] -- Up-to-date symlink: /home/wy/RS/A3/ros2_ws/install/rs_a3_description/share/rs_a3_description/launch/rs_a3_control.launch.py
+[0.143s] -- Up-to-date symlink: /home/wy/RS/A3/ros2_ws/install/rs_a3_description/share/rs_a3_description/config/rs_a3_controllers.yaml
+[0.143s] -- Up-to-date symlink: /home/wy/RS/A3/ros2_ws/install/rs_a3_description/share/rs_a3_description/config/rs_a3_view.rviz
+[0.143s] -- Up-to-date symlink: /home/wy/RS/A3/ros2_ws/install/rs_a3_description/share/ament_index/resource_index/package_run_dependencies/rs_a3_description
+[0.143s] -- Up-to-date symlink: /home/wy/RS/A3/ros2_ws/install/rs_a3_description/share/ament_index/resource_index/parent_prefix_path/rs_a3_description
+[0.143s] -- Up-to-date symlink: /home/wy/RS/A3/ros2_ws/install/rs_a3_description/share/rs_a3_description/environment/ament_prefix_path.sh
+[0.143s] -- Up-to-date symlink: /home/wy/RS/A3/ros2_ws/install/rs_a3_description/share/rs_a3_description/environment/ament_prefix_path.dsv
+[0.143s] -- Up-to-date symlink: /home/wy/RS/A3/ros2_ws/install/rs_a3_description/share/rs_a3_description/environment/path.sh
+[0.143s] -- Up-to-date symlink: /home/wy/RS/A3/ros2_ws/install/rs_a3_description/share/rs_a3_description/environment/path.dsv
+[0.143s] -- Up-to-date symlink: /home/wy/RS/A3/ros2_ws/install/rs_a3_description/share/rs_a3_description/local_setup.bash
+[0.143s] -- Up-to-date symlink: /home/wy/RS/A3/ros2_ws/install/rs_a3_description/share/rs_a3_description/local_setup.sh
+[0.143s] -- Up-to-date symlink: /home/wy/RS/A3/ros2_ws/install/rs_a3_description/share/rs_a3_description/local_setup.zsh
+[0.143s] -- Up-to-date symlink: /home/wy/RS/A3/ros2_ws/install/rs_a3_description/share/rs_a3_description/local_setup.dsv
+[0.144s] -- Symlinking: /home/wy/RS/A3/ros2_ws/install/rs_a3_description/share/rs_a3_description/package.dsv
+[0.149s] -- Up-to-date symlink: /home/wy/RS/A3/ros2_ws/install/rs_a3_description/share/ament_index/resource_index/packages/rs_a3_description
+[0.149s] -- Up-to-date symlink: /home/wy/RS/A3/ros2_ws/install/rs_a3_description/share/rs_a3_description/cmake/rs_a3_descriptionConfig.cmake
+[0.149s] -- Up-to-date symlink: /home/wy/RS/A3/ros2_ws/install/rs_a3_description/share/rs_a3_description/cmake/rs_a3_descriptionConfig-version.cmake
+[0.149s] -- Up-to-date symlink: /home/wy/RS/A3/ros2_ws/install/rs_a3_description/share/rs_a3_description/package.xml
+[0.150s] Invoked command in '/home/wy/RS/A3/ros2_ws/build/rs_a3_description' returned '0': AMENT_PREFIX_PATH=/home/wy/RS/A3/ros2_ws/install/rs_a3_hardware:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/wy/RS/A3/ros2_ws/install/rs_a3_hardware:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) LD_LIBRARY_PATH=/home/wy/RS/A3/ros2_ws/install/rs_a3_hardware/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/wy/miniconda3/envs/rl_gpu/lib /usr/bin/cmake --install /home/wy/RS/A3/ros2_ws/build/rs_a3_description

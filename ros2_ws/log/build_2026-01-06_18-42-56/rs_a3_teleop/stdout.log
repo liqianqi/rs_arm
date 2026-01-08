@@ -1,0 +1,21 @@
+running egg_info
+writing ../../build/rs_a3_teleop/rs_a3_teleop.egg-info/PKG-INFO
+writing dependency_links to ../../build/rs_a3_teleop/rs_a3_teleop.egg-info/dependency_links.txt
+writing entry points to ../../build/rs_a3_teleop/rs_a3_teleop.egg-info/entry_points.txt
+writing requirements to ../../build/rs_a3_teleop/rs_a3_teleop.egg-info/requires.txt
+writing top-level names to ../../build/rs_a3_teleop/rs_a3_teleop.egg-info/top_level.txt
+reading manifest file '../../build/rs_a3_teleop/rs_a3_teleop.egg-info/SOURCES.txt'
+writing manifest file '../../build/rs_a3_teleop/rs_a3_teleop.egg-info/SOURCES.txt'
+running build
+running build_py
+running install
+running install_lib
+running install_data
+copying config/xbox_teleop.yaml -> /home/wy/RS/A3/ros2_ws/install/rs_a3_teleop/share/rs_a3_teleop/config
+running install_egg_info
+removing '/home/wy/RS/A3/ros2_ws/install/rs_a3_teleop/lib/python3.10/site-packages/rs_a3_teleop-0.0.1-py3.10.egg-info' (and everything under it)
+Copying ../../build/rs_a3_teleop/rs_a3_teleop.egg-info to /home/wy/RS/A3/ros2_ws/install/rs_a3_teleop/lib/python3.10/site-packages/rs_a3_teleop-0.0.1-py3.10.egg-info
+running install_scripts
+Installing xbox_servo_teleop_node script to /home/wy/RS/A3/ros2_ws/install/rs_a3_teleop/lib/rs_a3_teleop
+Installing xbox_teleop_node script to /home/wy/RS/A3/ros2_ws/install/rs_a3_teleop/lib/rs_a3_teleop
+writing list of installed files to '/home/wy/RS/A3/ros2_ws/build/rs_a3_teleop/install.log'

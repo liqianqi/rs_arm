@@ -1,0 +1,4 @@
+Invoking command in '/home/wy/RS/A3/build/rs_a3_hardware': CMAKE_PREFIX_PATH=/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/wy/RS/A3/build/rs_a3_hardware -- -j24 -l24
+Invoked command in '/home/wy/RS/A3/build/rs_a3_hardware' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/wy/RS/A3/build/rs_a3_hardware -- -j24 -l24
+Invoking command in '/home/wy/RS/A3/build/rs_a3_hardware': CMAKE_PREFIX_PATH=/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --install /home/wy/RS/A3/build/rs_a3_hardware
+Invoked command in '/home/wy/RS/A3/build/rs_a3_hardware' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --install /home/wy/RS/A3/build/rs_a3_hardware

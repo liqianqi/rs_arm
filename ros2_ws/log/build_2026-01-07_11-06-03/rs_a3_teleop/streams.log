@@ -1,0 +1,18 @@
+[0.275s] Invoking command in '/home/wy/RS/A3/ros2_ws/build/rs_a3_teleop': CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/wy/RS/A3/ros2_ws/build/rs_a3_teleop/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/wy/RS/A3/ros2_ws/install/rs_a3_teleop/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/wy/RS/A3/ros2_ws/build/rs_a3_teleop/build --no-deps symlink_data
+[0.387s] running develop
+[0.447s] running egg_info
+[0.447s] writing rs_a3_teleop.egg-info/PKG-INFO
+[0.447s] writing dependency_links to rs_a3_teleop.egg-info/dependency_links.txt
+[0.447s] writing entry points to rs_a3_teleop.egg-info/entry_points.txt
+[0.448s] writing requirements to rs_a3_teleop.egg-info/requires.txt
+[0.448s] writing top-level names to rs_a3_teleop.egg-info/top_level.txt
+[0.448s] reading manifest file 'rs_a3_teleop.egg-info/SOURCES.txt'
+[0.449s] writing manifest file 'rs_a3_teleop.egg-info/SOURCES.txt'
+[0.449s] running build_ext
+[0.449s] Creating /home/wy/RS/A3/ros2_ws/install/rs_a3_teleop/lib/python3.10/site-packages/rs-a3-teleop.egg-link (link to .)
+[0.449s] Installing xbox_servo_teleop_node script to /home/wy/RS/A3/ros2_ws/install/rs_a3_teleop/lib/rs_a3_teleop
+[0.449s] Installing xbox_teleop_node script to /home/wy/RS/A3/ros2_ws/install/rs_a3_teleop/lib/rs_a3_teleop
+[0.449s] 
+[0.449s] Installed /home/wy/RS/A3/ros2_ws/build/rs_a3_teleop
+[0.449s] running symlink_data
+[0.464s] Invoked command in '/home/wy/RS/A3/ros2_ws/build/rs_a3_teleop' returned '0': CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/wy/RS/A3/ros2_ws/build/rs_a3_teleop/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/wy/RS/A3/ros2_ws/install/rs_a3_teleop/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/wy/RS/A3/ros2_ws/build/rs_a3_teleop/build --no-deps symlink_data

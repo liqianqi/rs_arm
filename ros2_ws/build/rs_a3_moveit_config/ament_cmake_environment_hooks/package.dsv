@@ -1,0 +1,4 @@
+source;share/rs_a3_moveit_config/local_setup.bash
+source;share/rs_a3_moveit_config/local_setup.dsv
+source;share/rs_a3_moveit_config/local_setup.sh
+source;share/rs_a3_moveit_config/local_setup.zsh

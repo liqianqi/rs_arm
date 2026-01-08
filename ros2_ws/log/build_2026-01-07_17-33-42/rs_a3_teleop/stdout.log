@@ -1,0 +1,16 @@
+running develop
+running egg_info
+writing rs_a3_teleop.egg-info/PKG-INFO
+writing dependency_links to rs_a3_teleop.egg-info/dependency_links.txt
+writing entry points to rs_a3_teleop.egg-info/entry_points.txt
+writing requirements to rs_a3_teleop.egg-info/requires.txt
+writing top-level names to rs_a3_teleop.egg-info/top_level.txt
+reading manifest file 'rs_a3_teleop.egg-info/SOURCES.txt'
+writing manifest file 'rs_a3_teleop.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/wy/RS/A3/ros2_ws/install/rs_a3_teleop/lib/python3.10/site-packages/rs-a3-teleop.egg-link (link to .)
+Installing xbox_servo_node script to /home/wy/RS/A3/ros2_ws/install/rs_a3_teleop/lib/rs_a3_teleop
+Installing xbox_teleop_node script to /home/wy/RS/A3/ros2_ws/install/rs_a3_teleop/lib/rs_a3_teleop
+
+Installed /home/wy/RS/A3/ros2_ws/build/rs_a3_teleop
+running symlink_data

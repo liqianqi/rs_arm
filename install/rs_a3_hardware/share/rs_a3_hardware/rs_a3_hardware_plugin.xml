@@ -1,0 +1,10 @@
+<library path="rs_a3_hardware">
+  <class name="rs_a3_hardware/RsA3HardwareInterface"
+         type="rs_a3_hardware::RsA3HardwareInterface"
+         base_class_type="hardware_interface::SystemInterface">
+    <description>
+      ROS2 Control hardware interface for RS-A3 6-DOF robot arm with Robstride RS00/RS05 motors via CANdle/gs_usb.
+    </description>
+  </class>
+</library>
+

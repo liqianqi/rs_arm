@@ -1,0 +1,41 @@
+# Xbox手柄控制参数配置
+
+xbox_teleop_node:
+  ros__parameters:
+    # 更新频率 (Hz) - 50Hz提高响应速度
+    update_rate: 50.0
+    
+    # 使用快速IK模式（true=50Hz IK直接控制，false=传统路径规划）
+    # 快速IK模式：每帧调用IK服务计算关节位置，直接发布到控制器，可达真正的50Hz
+    # 传统模式：使用GetCartesianPath服务规划完整路径，实际频率约5-10Hz
+    use_fast_ik_mode: true
+    
+    # 平滑滤波系数 (0-1)，越小越平滑但响应越慢
+    # 50Hz下使用0.5保持响应速度
+    smoothing_factor: 0.5
+    
+    # 平移缩放因子 (米/更新周期)
+    # 在50Hz下，0.00007表示每秒最大3.5mm移动速度（原来的1/3）
+    translation_scale: 0.00007
+    
+    # 旋转缩放因子 (弧度/更新周期)
+    # 在50Hz下，0.0007表示每秒最大0.035弧度(约2度)旋转速度（原来的1/3）
+    rotation_scale: 0.0007
+    
+    # MoveIt规划组名称
+    planning_group: "arm"
+    
+    # 坐标系
+    base_frame: "base_link"
+    end_effector_frame: "end_effector"
+    
+    # 摇杆死区 (0-1)
+    # 降低死区让控制更灵敏，同时保留基本的抗漂移能力
+    deadzone: 0.15
+    
+    # 调试模式 - 显示摇杆原始输入
+    debug_input: false
+
+
+
+

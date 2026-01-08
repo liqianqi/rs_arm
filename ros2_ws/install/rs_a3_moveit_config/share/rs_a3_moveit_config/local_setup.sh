@@ -1,0 +1,1 @@
+/home/wy/RS/A3/ros2_ws/build/rs_a3_moveit_config/ament_cmake_environment_hooks/local_setup.sh

@@ -1,0 +1,1 @@
+/home/wy/RS/A3/ros2_ws/build/rs_a3_hardware/ament_cmake_core/rs_a3_hardwareConfig-version.cmake

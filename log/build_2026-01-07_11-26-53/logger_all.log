@@ -1,0 +1,243 @@
+[0.053s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--packages-select', 'rs_a3_hardware']
+[0.053s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=24, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=['rs_a3_hardware'], packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7a3f0316a1a0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7a3f03277130>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7a3f03277130>>, mixin_verb=('build',))
+[0.128s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.128s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.128s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.128s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.128s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.128s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.128s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/wy/RS/A3'
+[0.128s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.128s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.128s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.128s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.128s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.128s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.128s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.128s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.128s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.134s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.134s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.134s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.134s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.134s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.135s] Level 1:colcon.colcon_core.package_identification:_identify(RS_A3_urdf) by extensions ['ignore', 'ignore_ament_install']
+[0.135s] Level 1:colcon.colcon_core.package_identification:_identify(RS_A3_urdf) by extension 'ignore'
+[0.135s] Level 1:colcon.colcon_core.package_identification:_identify(RS_A3_urdf) by extension 'ignore_ament_install'
+[0.135s] Level 1:colcon.colcon_core.package_identification:_identify(RS_A3_urdf) by extensions ['colcon_pkg']
+[0.135s] Level 1:colcon.colcon_core.package_identification:_identify(RS_A3_urdf) by extension 'colcon_pkg'
+[0.135s] Level 1:colcon.colcon_core.package_identification:_identify(RS_A3_urdf) by extensions ['colcon_meta']
+[0.135s] Level 1:colcon.colcon_core.package_identification:_identify(RS_A3_urdf) by extension 'colcon_meta'
+[0.135s] Level 1:colcon.colcon_core.package_identification:_identify(RS_A3_urdf) by extensions ['ros']
+[0.135s] Level 1:colcon.colcon_core.package_identification:_identify(RS_A3_urdf) by extension 'ros'
+[0.135s] Level 1:colcon.colcon_core.package_identification:_identify(RS_A3_urdf) by extensions ['cmake', 'python']
+[0.135s] Level 1:colcon.colcon_core.package_identification:_identify(RS_A3_urdf) by extension 'cmake'
+[0.135s] Level 1:colcon.colcon_core.package_identification:_identify(RS_A3_urdf) by extension 'python'
+[0.135s] Level 1:colcon.colcon_core.package_identification:_identify(RS_A3_urdf) by extensions ['python_setup_py']
+[0.135s] Level 1:colcon.colcon_core.package_identification:_identify(RS_A3_urdf) by extension 'python_setup_py'
+[0.135s] Level 1:colcon.colcon_core.package_identification:_identify(RS_A3_urdf/RS-A3) by extensions ['ignore', 'ignore_ament_install']
+[0.135s] Level 1:colcon.colcon_core.package_identification:_identify(RS_A3_urdf/RS-A3) by extension 'ignore'
+[0.135s] Level 1:colcon.colcon_core.package_identification:_identify(RS_A3_urdf/RS-A3) by extension 'ignore_ament_install'
+[0.135s] Level 1:colcon.colcon_core.package_identification:_identify(RS_A3_urdf/RS-A3) by extensions ['colcon_pkg']
+[0.135s] Level 1:colcon.colcon_core.package_identification:_identify(RS_A3_urdf/RS-A3) by extension 'colcon_pkg'
+[0.135s] Level 1:colcon.colcon_core.package_identification:_identify(RS_A3_urdf/RS-A3) by extensions ['colcon_meta']
+[0.135s] Level 1:colcon.colcon_core.package_identification:_identify(RS_A3_urdf/RS-A3) by extension 'colcon_meta'
+[0.135s] Level 1:colcon.colcon_core.package_identification:_identify(RS_A3_urdf/RS-A3) by extensions ['ros']
+[0.135s] Level 1:colcon.colcon_core.package_identification:_identify(RS_A3_urdf/RS-A3) by extension 'ros'
+[0.136s] DEBUG:colcon.colcon_core.package_identification:Package 'RS_A3_urdf/RS-A3' with type 'ros.ament_cmake' and name 'rs_a3_description'
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws) by extensions ['ignore', 'ignore_ament_install']
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws) by extension 'ignore'
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws) by extension 'ignore_ament_install'
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws) by extensions ['colcon_pkg']
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws) by extension 'colcon_pkg'
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws) by extensions ['colcon_meta']
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws) by extension 'colcon_meta'
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws) by extensions ['ros']
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws) by extension 'ros'
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws) by extensions ['cmake', 'python']
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws) by extension 'cmake'
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws) by extension 'python'
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws) by extensions ['python_setup_py']
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws) by extension 'python_setup_py'
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/build) by extensions ['ignore', 'ignore_ament_install']
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/build) by extension 'ignore'
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/build) ignored
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/install) by extensions ['ignore', 'ignore_ament_install']
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/install) by extension 'ignore'
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/install) ignored
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/log) by extensions ['ignore', 'ignore_ament_install']
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/log) by extension 'ignore'
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/log) ignored
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src) by extensions ['ignore', 'ignore_ament_install']
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src) by extension 'ignore'
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src) by extension 'ignore_ament_install'
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src) by extensions ['colcon_pkg']
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src) by extension 'colcon_pkg'
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src) by extensions ['colcon_meta']
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src) by extension 'colcon_meta'
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src) by extensions ['ros']
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src) by extension 'ros'
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src) by extensions ['cmake', 'python']
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src) by extension 'cmake'
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src) by extension 'python'
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src) by extensions ['python_setup_py']
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src) by extension 'python_setup_py'
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/rs_a3_description) by extensions ['ignore', 'ignore_ament_install']
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/rs_a3_description) by extension 'ignore'
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/rs_a3_description) by extension 'ignore_ament_install'
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/rs_a3_description) by extensions ['colcon_pkg']
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/rs_a3_description) by extension 'colcon_pkg'
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/rs_a3_description) by extensions ['colcon_meta']
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/rs_a3_description) by extension 'colcon_meta'
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/rs_a3_description) by extensions ['ros']
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/rs_a3_description) by extension 'ros'
+[0.138s] DEBUG:colcon.colcon_core.package_identification:Package 'ros2_ws/src/rs_a3_description' with type 'ros.ament_cmake' and name 'rs_a3_description'
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/rs_a3_hardware) by extensions ['ignore', 'ignore_ament_install']
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/rs_a3_hardware) by extension 'ignore'
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/rs_a3_hardware) by extension 'ignore_ament_install'
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/rs_a3_hardware) by extensions ['colcon_pkg']
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/rs_a3_hardware) by extension 'colcon_pkg'
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/rs_a3_hardware) by extensions ['colcon_meta']
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/rs_a3_hardware) by extension 'colcon_meta'
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/rs_a3_hardware) by extensions ['ros']
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/rs_a3_hardware) by extension 'ros'
+[0.139s] DEBUG:colcon.colcon_core.package_identification:Package 'ros2_ws/src/rs_a3_hardware' with type 'ros.ament_cmake' and name 'rs_a3_hardware'
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/rs_a3_moveit_config) by extensions ['ignore', 'ignore_ament_install']
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/rs_a3_moveit_config) by extension 'ignore'
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/rs_a3_moveit_config) by extension 'ignore_ament_install'
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/rs_a3_moveit_config) by extensions ['colcon_pkg']
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/rs_a3_moveit_config) by extension 'colcon_pkg'
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/rs_a3_moveit_config) by extensions ['colcon_meta']
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/rs_a3_moveit_config) by extension 'colcon_meta'
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/rs_a3_moveit_config) by extensions ['ros']
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/rs_a3_moveit_config) by extension 'ros'
+[0.139s] DEBUG:colcon.colcon_core.package_identification:Package 'ros2_ws/src/rs_a3_moveit_config' with type 'ros.ament_cmake' and name 'rs_a3_moveit_config'
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/rs_a3_teleop) by extensions ['ignore', 'ignore_ament_install']
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/rs_a3_teleop) by extension 'ignore'
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/rs_a3_teleop) by extension 'ignore_ament_install'
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/rs_a3_teleop) by extensions ['colcon_pkg']
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/rs_a3_teleop) by extension 'colcon_pkg'
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/rs_a3_teleop) by extensions ['colcon_meta']
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/rs_a3_teleop) by extension 'colcon_meta'
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/rs_a3_teleop) by extensions ['ros']
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/rs_a3_teleop) by extension 'ros'
+[0.140s] DEBUG:colcon.colcon_core.package_identification:Package 'ros2_ws/src/rs_a3_teleop' with type 'ros.ament_python' and name 'rs_a3_teleop'
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extensions ['ignore', 'ignore_ament_install']
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extension 'ignore'
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extension 'ignore_ament_install'
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extensions ['colcon_pkg']
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extension 'colcon_pkg'
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extensions ['colcon_meta']
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extension 'colcon_meta'
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extensions ['ros']
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extension 'ros'
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extensions ['cmake', 'python']
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extension 'cmake'
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extension 'python'
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extensions ['python_setup_py']
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(scripts) by extension 'python_setup_py'
+[0.140s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.140s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.140s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.140s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.140s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.157s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'rs_a3_description' in 'RS_A3_urdf/RS-A3'
+[0.157s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'rs_a3_teleop' in 'ros2_ws/src/rs_a3_teleop'
+[0.157s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'rs_a3_description' in 'ros2_ws/src/rs_a3_description'
+[0.157s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'rs_a3_moveit_config' in 'ros2_ws/src/rs_a3_moveit_config'
+[0.157s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.157s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.158s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 356 installed packages in /opt/ros/humble
+[0.159s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.179s] Level 5:colcon.colcon_core.verb:set package 'rs_a3_hardware' build argument 'cmake_args' from command line to 'None'
+[0.179s] Level 5:colcon.colcon_core.verb:set package 'rs_a3_hardware' build argument 'cmake_target' from command line to 'None'
+[0.179s] Level 5:colcon.colcon_core.verb:set package 'rs_a3_hardware' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.179s] Level 5:colcon.colcon_core.verb:set package 'rs_a3_hardware' build argument 'cmake_clean_cache' from command line to 'False'
+[0.179s] Level 5:colcon.colcon_core.verb:set package 'rs_a3_hardware' build argument 'cmake_clean_first' from command line to 'False'
+[0.179s] Level 5:colcon.colcon_core.verb:set package 'rs_a3_hardware' build argument 'cmake_force_configure' from command line to 'False'
+[0.179s] Level 5:colcon.colcon_core.verb:set package 'rs_a3_hardware' build argument 'ament_cmake_args' from command line to 'None'
+[0.179s] Level 5:colcon.colcon_core.verb:set package 'rs_a3_hardware' build argument 'catkin_cmake_args' from command line to 'None'
+[0.179s] Level 5:colcon.colcon_core.verb:set package 'rs_a3_hardware' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.179s] DEBUG:colcon.colcon_core.verb:Building package 'rs_a3_hardware' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/wy/RS/A3/build/rs_a3_hardware', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/wy/RS/A3/install/rs_a3_hardware', 'merge_install': False, 'path': '/home/wy/RS/A3/ros2_ws/src/rs_a3_hardware', 'symlink_install': False, 'test_result_base': None}
+[0.179s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.180s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.180s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/wy/RS/A3/ros2_ws/src/rs_a3_hardware' with build type 'ament_cmake'
+[0.180s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/wy/RS/A3/ros2_ws/src/rs_a3_hardware'
+[0.181s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.181s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.181s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.186s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/wy/RS/A3/build/rs_a3_hardware': CMAKE_PREFIX_PATH=/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/wy/RS/A3/build/rs_a3_hardware -- -j24 -l24
+[2.187s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/wy/RS/A3/build/rs_a3_hardware' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/wy/RS/A3/build/rs_a3_hardware -- -j24 -l24
+[2.192s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/wy/RS/A3/build/rs_a3_hardware': CMAKE_PREFIX_PATH=/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --install /home/wy/RS/A3/build/rs_a3_hardware
+[2.200s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rs_a3_hardware)
+[2.201s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/wy/RS/A3/build/rs_a3_hardware' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --install /home/wy/RS/A3/build/rs_a3_hardware
+[2.202s] Level 1:colcon.colcon_core.environment:checking '/home/wy/RS/A3/install/rs_a3_hardware' for CMake module files
+[2.203s] Level 1:colcon.colcon_core.environment:checking '/home/wy/RS/A3/install/rs_a3_hardware' for CMake config files
+[2.203s] Level 1:colcon.colcon_core.shell:create_environment_hook('rs_a3_hardware', 'cmake_prefix_path')
+[2.203s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wy/RS/A3/install/rs_a3_hardware/share/rs_a3_hardware/hook/cmake_prefix_path.ps1'
+[2.203s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/wy/RS/A3/install/rs_a3_hardware/share/rs_a3_hardware/hook/cmake_prefix_path.dsv'
+[2.203s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wy/RS/A3/install/rs_a3_hardware/share/rs_a3_hardware/hook/cmake_prefix_path.sh'
+[2.204s] Level 1:colcon.colcon_core.environment:checking '/home/wy/RS/A3/install/rs_a3_hardware/lib'
+[2.204s] Level 1:colcon.colcon_core.shell:create_environment_hook('rs_a3_hardware', 'ld_library_path_lib')
+[2.204s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wy/RS/A3/install/rs_a3_hardware/share/rs_a3_hardware/hook/ld_library_path_lib.ps1'
+[2.205s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/wy/RS/A3/install/rs_a3_hardware/share/rs_a3_hardware/hook/ld_library_path_lib.dsv'
+[2.205s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wy/RS/A3/install/rs_a3_hardware/share/rs_a3_hardware/hook/ld_library_path_lib.sh'
+[2.205s] Level 1:colcon.colcon_core.environment:checking '/home/wy/RS/A3/install/rs_a3_hardware/bin'
+[2.205s] Level 1:colcon.colcon_core.environment:checking '/home/wy/RS/A3/install/rs_a3_hardware/lib/pkgconfig/rs_a3_hardware.pc'
+[2.205s] Level 1:colcon.colcon_core.environment:checking '/home/wy/RS/A3/install/rs_a3_hardware/lib/python3.10/site-packages'
+[2.206s] Level 1:colcon.colcon_core.environment:checking '/home/wy/RS/A3/install/rs_a3_hardware/bin'
+[2.206s] INFO:colcon.colcon_core.shell:Creating package script '/home/wy/RS/A3/install/rs_a3_hardware/share/rs_a3_hardware/package.ps1'
+[2.206s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/wy/RS/A3/install/rs_a3_hardware/share/rs_a3_hardware/package.dsv'
+[2.206s] INFO:colcon.colcon_core.shell:Creating package script '/home/wy/RS/A3/install/rs_a3_hardware/share/rs_a3_hardware/package.sh'
+[2.207s] INFO:colcon.colcon_core.shell:Creating package script '/home/wy/RS/A3/install/rs_a3_hardware/share/rs_a3_hardware/package.bash'
+[2.207s] INFO:colcon.colcon_core.shell:Creating package script '/home/wy/RS/A3/install/rs_a3_hardware/share/rs_a3_hardware/package.zsh'
+[2.207s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/wy/RS/A3/install/rs_a3_hardware/share/colcon-core/packages/rs_a3_hardware)
+[2.208s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rs_a3_hardware)
+[2.208s] Level 1:colcon.colcon_core.environment:checking '/home/wy/RS/A3/install/rs_a3_hardware' for CMake module files
+[2.208s] Level 1:colcon.colcon_core.environment:checking '/home/wy/RS/A3/install/rs_a3_hardware' for CMake config files
+[2.208s] Level 1:colcon.colcon_core.shell:create_environment_hook('rs_a3_hardware', 'cmake_prefix_path')
+[2.208s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wy/RS/A3/install/rs_a3_hardware/share/rs_a3_hardware/hook/cmake_prefix_path.ps1'
+[2.208s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/wy/RS/A3/install/rs_a3_hardware/share/rs_a3_hardware/hook/cmake_prefix_path.dsv'
+[2.209s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wy/RS/A3/install/rs_a3_hardware/share/rs_a3_hardware/hook/cmake_prefix_path.sh'
+[2.209s] Level 1:colcon.colcon_core.environment:checking '/home/wy/RS/A3/install/rs_a3_hardware/lib'
+[2.209s] Level 1:colcon.colcon_core.shell:create_environment_hook('rs_a3_hardware', 'ld_library_path_lib')
+[2.209s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wy/RS/A3/install/rs_a3_hardware/share/rs_a3_hardware/hook/ld_library_path_lib.ps1'
+[2.209s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/wy/RS/A3/install/rs_a3_hardware/share/rs_a3_hardware/hook/ld_library_path_lib.dsv'
+[2.209s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/wy/RS/A3/install/rs_a3_hardware/share/rs_a3_hardware/hook/ld_library_path_lib.sh'
+[2.210s] Level 1:colcon.colcon_core.environment:checking '/home/wy/RS/A3/install/rs_a3_hardware/bin'
+[2.210s] Level 1:colcon.colcon_core.environment:checking '/home/wy/RS/A3/install/rs_a3_hardware/lib/pkgconfig/rs_a3_hardware.pc'
+[2.210s] Level 1:colcon.colcon_core.environment:checking '/home/wy/RS/A3/install/rs_a3_hardware/lib/python3.10/site-packages'
+[2.210s] Level 1:colcon.colcon_core.environment:checking '/home/wy/RS/A3/install/rs_a3_hardware/bin'
+[2.210s] INFO:colcon.colcon_core.shell:Creating package script '/home/wy/RS/A3/install/rs_a3_hardware/share/rs_a3_hardware/package.ps1'
+[2.210s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/wy/RS/A3/install/rs_a3_hardware/share/rs_a3_hardware/package.dsv'
+[2.211s] INFO:colcon.colcon_core.shell:Creating package script '/home/wy/RS/A3/install/rs_a3_hardware/share/rs_a3_hardware/package.sh'
+[2.211s] INFO:colcon.colcon_core.shell:Creating package script '/home/wy/RS/A3/install/rs_a3_hardware/share/rs_a3_hardware/package.bash'
+[2.211s] INFO:colcon.colcon_core.shell:Creating package script '/home/wy/RS/A3/install/rs_a3_hardware/share/rs_a3_hardware/package.zsh'
+[2.211s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/wy/RS/A3/install/rs_a3_hardware/share/colcon-core/packages/rs_a3_hardware)
+[2.211s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[2.211s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[2.211s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[2.211s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[2.214s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[2.214s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[2.214s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[2.225s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[2.226s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/wy/RS/A3/install/local_setup.ps1'
+[2.226s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/wy/RS/A3/install/_local_setup_util_ps1.py'
+[2.227s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/wy/RS/A3/install/setup.ps1'
+[2.228s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/wy/RS/A3/install/local_setup.sh'
+[2.228s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/wy/RS/A3/install/_local_setup_util_sh.py'
+[2.228s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/wy/RS/A3/install/setup.sh'
+[2.229s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/wy/RS/A3/install/local_setup.bash'
+[2.229s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/wy/RS/A3/install/setup.bash'
+[2.230s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/wy/RS/A3/install/local_setup.zsh'
+[2.230s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/wy/RS/A3/install/setup.zsh'

@@ -1,0 +1,50 @@
+[0.255s] Invoking command in '/home/wy/RS/A3/ros2_ws/src/rs_a3_teleop': CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/wy/RS/A3/ros2_ws/build/rs_a3_teleop/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/wy/RS/A3/ros2_ws/install/rs_a3_teleop/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/rs_a3_teleop build --build-base /home/wy/RS/A3/ros2_ws/build/rs_a3_teleop/build install --record /home/wy/RS/A3/ros2_ws/build/rs_a3_teleop/install.log --single-version-externally-managed install_data
+[0.358s] running egg_info
+[0.358s] creating ../../build/rs_a3_teleop/rs_a3_teleop.egg-info
+[0.358s] writing ../../build/rs_a3_teleop/rs_a3_teleop.egg-info/PKG-INFO
+[0.358s] writing dependency_links to ../../build/rs_a3_teleop/rs_a3_teleop.egg-info/dependency_links.txt
+[0.358s] writing entry points to ../../build/rs_a3_teleop/rs_a3_teleop.egg-info/entry_points.txt
+[0.358s] writing requirements to ../../build/rs_a3_teleop/rs_a3_teleop.egg-info/requires.txt
+[0.359s] writing top-level names to ../../build/rs_a3_teleop/rs_a3_teleop.egg-info/top_level.txt
+[0.359s] writing manifest file '../../build/rs_a3_teleop/rs_a3_teleop.egg-info/SOURCES.txt'
+[0.359s] reading manifest file '../../build/rs_a3_teleop/rs_a3_teleop.egg-info/SOURCES.txt'
+[0.359s] writing manifest file '../../build/rs_a3_teleop/rs_a3_teleop.egg-info/SOURCES.txt'
+[0.359s] running build
+[0.359s] running build_py
+[0.359s] creating /home/wy/RS/A3/ros2_ws/build/rs_a3_teleop/build
+[0.359s] creating /home/wy/RS/A3/ros2_ws/build/rs_a3_teleop/build/lib
+[0.359s] creating /home/wy/RS/A3/ros2_ws/build/rs_a3_teleop/build/lib/rs_a3_teleop
+[0.359s] copying rs_a3_teleop/xbox_servo_teleop.py -> /home/wy/RS/A3/ros2_ws/build/rs_a3_teleop/build/lib/rs_a3_teleop
+[0.360s] copying rs_a3_teleop/__init__.py -> /home/wy/RS/A3/ros2_ws/build/rs_a3_teleop/build/lib/rs_a3_teleop
+[0.360s] copying rs_a3_teleop/xbox_teleop_node.py -> /home/wy/RS/A3/ros2_ws/build/rs_a3_teleop/build/lib/rs_a3_teleop
+[0.360s] running install
+[0.360s] running install_lib
+[0.360s] creating /home/wy/RS/A3/ros2_ws/install/rs_a3_teleop/lib/python3.10/site-packages/rs_a3_teleop
+[0.360s] copying /home/wy/RS/A3/ros2_ws/build/rs_a3_teleop/build/lib/rs_a3_teleop/xbox_servo_teleop.py -> /home/wy/RS/A3/ros2_ws/install/rs_a3_teleop/lib/python3.10/site-packages/rs_a3_teleop
+[0.360s] copying /home/wy/RS/A3/ros2_ws/build/rs_a3_teleop/build/lib/rs_a3_teleop/__init__.py -> /home/wy/RS/A3/ros2_ws/install/rs_a3_teleop/lib/python3.10/site-packages/rs_a3_teleop
+[0.360s] copying /home/wy/RS/A3/ros2_ws/build/rs_a3_teleop/build/lib/rs_a3_teleop/xbox_teleop_node.py -> /home/wy/RS/A3/ros2_ws/install/rs_a3_teleop/lib/python3.10/site-packages/rs_a3_teleop
+[0.360s] byte-compiling /home/wy/RS/A3/ros2_ws/install/rs_a3_teleop/lib/python3.10/site-packages/rs_a3_teleop/xbox_servo_teleop.py to xbox_servo_teleop.cpython-310.pyc
+[0.361s] byte-compiling /home/wy/RS/A3/ros2_ws/install/rs_a3_teleop/lib/python3.10/site-packages/rs_a3_teleop/__init__.py to __init__.cpython-310.pyc
+[0.361s] byte-compiling /home/wy/RS/A3/ros2_ws/install/rs_a3_teleop/lib/python3.10/site-packages/rs_a3_teleop/xbox_teleop_node.py to xbox_teleop_node.cpython-310.pyc
+[0.363s] running install_data
+[0.363s] creating /home/wy/RS/A3/ros2_ws/install/rs_a3_teleop/share/ament_index
+[0.363s] creating /home/wy/RS/A3/ros2_ws/install/rs_a3_teleop/share/ament_index/resource_index
+[0.363s] creating /home/wy/RS/A3/ros2_ws/install/rs_a3_teleop/share/ament_index/resource_index/packages
+[0.363s] copying resource/rs_a3_teleop -> /home/wy/RS/A3/ros2_ws/install/rs_a3_teleop/share/ament_index/resource_index/packages
+[0.363s] copying package.xml -> /home/wy/RS/A3/ros2_ws/install/rs_a3_teleop/share/rs_a3_teleop
+[0.363s] creating /home/wy/RS/A3/ros2_ws/install/rs_a3_teleop/share/rs_a3_teleop/launch
+[0.363s] copying launch/xbox_teleop.launch.py -> /home/wy/RS/A3/ros2_ws/install/rs_a3_teleop/share/rs_a3_teleop/launch
+[0.363s] copying launch/xbox_servo_teleop.launch.py -> /home/wy/RS/A3/ros2_ws/install/rs_a3_teleop/share/rs_a3_teleop/launch
+[0.363s] copying launch/simple_teleop.launch.py -> /home/wy/RS/A3/ros2_ws/install/rs_a3_teleop/share/rs_a3_teleop/launch
+[0.363s] copying launch/complete_teleop.launch.py -> /home/wy/RS/A3/ros2_ws/install/rs_a3_teleop/share/rs_a3_teleop/launch
+[0.363s] creating /home/wy/RS/A3/ros2_ws/install/rs_a3_teleop/share/rs_a3_teleop/config
+[0.363s] copying config/moveit_servo_config.yaml -> /home/wy/RS/A3/ros2_ws/install/rs_a3_teleop/share/rs_a3_teleop/config
+[0.363s] copying config/xbox_servo_teleop.yaml -> /home/wy/RS/A3/ros2_ws/install/rs_a3_teleop/share/rs_a3_teleop/config
+[0.363s] copying config/xbox_teleop.yaml -> /home/wy/RS/A3/ros2_ws/install/rs_a3_teleop/share/rs_a3_teleop/config
+[0.363s] running install_egg_info
+[0.365s] Copying ../../build/rs_a3_teleop/rs_a3_teleop.egg-info to /home/wy/RS/A3/ros2_ws/install/rs_a3_teleop/lib/python3.10/site-packages/rs_a3_teleop-0.0.1-py3.10.egg-info
+[0.365s] running install_scripts
+[0.373s] Installing xbox_servo_teleop_node script to /home/wy/RS/A3/ros2_ws/install/rs_a3_teleop/lib/rs_a3_teleop
+[0.374s] Installing xbox_teleop_node script to /home/wy/RS/A3/ros2_ws/install/rs_a3_teleop/lib/rs_a3_teleop
+[0.374s] writing list of installed files to '/home/wy/RS/A3/ros2_ws/build/rs_a3_teleop/install.log'
+[0.384s] Invoked command in '/home/wy/RS/A3/ros2_ws/src/rs_a3_teleop' returned '0': CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/wy/RS/A3/ros2_ws/build/rs_a3_teleop/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/wy/RS/A3/ros2_ws/install/rs_a3_teleop/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/rs_a3_teleop build --build-base /home/wy/RS/A3/ros2_ws/build/rs_a3_teleop/build install --record /home/wy/RS/A3/ros2_ws/build/rs_a3_teleop/install.log --single-version-externally-managed install_data
