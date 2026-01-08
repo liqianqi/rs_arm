@@ -14,8 +14,8 @@
           <plugin>rs_a3_hardware/RsA3HardwareInterface</plugin>
           <param name="can_interface">${can_interface}</param>
           <param name="host_can_id">${host_can_id}</param>
-          <param name="position_kp">100.0</param>
-          <param name="position_kd">3.0</param>
+          <param name="position_kp">80.0</param>
+          <param name="position_kd">2.5</param>
           <param name="velocity_limit">10.0</param>
           <!-- 平滑滤波参数 -->
           <param name="smoothing_alpha">0.2</param>     <!-- 低通滤波系数 -->

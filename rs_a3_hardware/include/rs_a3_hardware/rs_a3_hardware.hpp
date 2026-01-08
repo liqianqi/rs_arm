@@ -15,7 +15,9 @@
 #include "hardware_interface/system_interface.hpp"
 #include "hardware_interface/types/hardware_interface_return_values.hpp"
 #include "rclcpp/macros.hpp"
+#include "rclcpp/rclcpp.hpp"
 #include "rclcpp_lifecycle/state.hpp"
+#include "sensor_msgs/msg/joint_state.hpp"
 
 #include "rs_a3_hardware/robstride_can_driver.hpp"
 
@@ -124,6 +126,11 @@ private:
   ControlMode control_mode_;
   
   bool use_mock_hardware_;
+  
+  // 调试发布器
+  rclcpp::Node::SharedPtr debug_node_;
+  rclcpp::Publisher<sensor_msgs::msg::JointState>::SharedPtr hw_cmd_pub_;      // 控制器发来的命令
+  rclcpp::Publisher<sensor_msgs::msg::JointState>::SharedPtr smoothed_cmd_pub_; // 平滑后发给电机的命令
 };
 
 }  // namespace rs_a3_hardware

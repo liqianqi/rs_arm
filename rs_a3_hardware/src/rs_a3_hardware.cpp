@@ -12,6 +12,7 @@
 
 #include "hardware_interface/types/hardware_interface_type_values.hpp"
 #include "rclcpp/rclcpp.hpp"
+#include "sensor_msgs/msg/joint_state.hpp"
 
 namespace rs_a3_hardware
 {
@@ -105,6 +106,14 @@ hardware_interface::CallbackReturn RsA3HardwareInterface::on_init(
   RCLCPP_INFO(rclcpp::get_logger("RsA3HardwareInterface"),
               "Initialized with %zu joints on %s, smoothing_alpha=%.2f, max_vel=%.1f rad/s, max_acc=%.1f rad/s²", 
               num_joints, can_interface_.c_str(), smoothing_alpha_, max_velocity_, max_acceleration_);
+
+  // 初始化调试发布器节点
+  debug_node_ = rclcpp::Node::make_shared("rs_a3_hw_debug");
+  hw_cmd_pub_ = debug_node_->create_publisher<sensor_msgs::msg::JointState>("/debug/hw_command", 10);
+  smoothed_cmd_pub_ = debug_node_->create_publisher<sensor_msgs::msg::JointState>("/debug/smoothed_command", 10);
+  
+  RCLCPP_INFO(rclcpp::get_logger("RsA3HardwareInterface"),
+              "Debug publishers created: /debug/hw_command, /debug/smoothed_command");
 
   return hardware_interface::CallbackReturn::SUCCESS;
 }
@@ -497,6 +506,28 @@ hardware_interface::return_type RsA3HardwareInterface::write(
           "Failed to send motion control command to motor %d", config.motor_id);
       }
     }
+  }
+
+  // 发布调试信息（每10次发布一次，约20Hz）
+  if (write_counter % 10 == 0 && debug_node_ && hw_cmd_pub_ && smoothed_cmd_pub_) {
+    auto now = debug_node_->get_clock()->now();
+    
+    // 发布控制器命令位置
+    sensor_msgs::msg::JointState hw_cmd_msg;
+    hw_cmd_msg.header.stamp = now;
+    for (const auto& config : joint_configs_) {
+      hw_cmd_msg.name.push_back(config.name);
+    }
+    hw_cmd_msg.position = hw_commands_positions_;
+    hw_cmd_pub_->publish(hw_cmd_msg);
+    
+    // 发布平滑后的命令位置（实际发给电机的）
+    sensor_msgs::msg::JointState smoothed_msg;
+    smoothed_msg.header.stamp = now;
+    smoothed_msg.name = hw_cmd_msg.name;
+    smoothed_msg.position = smoothed_positions_;
+    smoothed_msg.velocity = smoothed_velocities_;
+    smoothed_cmd_pub_->publish(smoothed_msg);
   }
 
   write_counter++;
