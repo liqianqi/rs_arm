@@ -3,7 +3,7 @@
 <package format="3">
   <name>rs_a3_teleop</name>
   <version>0.0.1</version>
-  <description>RS-A3机械臂Xbox手柄实时控制包</description>
+  <description>RS-A3机械臂手柄遥控包，支持Xbox手柄和Joy-Con IMU控制</description>
   <maintainer email="wy@todo.todo">wy</maintainer>
   <license>Apache-2.0</license>
 

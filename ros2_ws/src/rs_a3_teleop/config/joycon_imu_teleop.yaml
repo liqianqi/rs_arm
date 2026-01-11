@@ -1,0 +1,63 @@
+# Joy-Con IMU 遥控参数配置
+
+joycon_imu_teleop_node:
+  ros__parameters:
+    # ==================== IMU 参数 ====================
+    # 采样频率 (Hz)
+    sample_rate: 60.0
+    # 标定采样数
+    calibration_samples: 200
+    # 标定超时时间 (秒)
+    calibration_timeout: 5.0
+    
+    # ==================== 滤波参数 ====================
+    # 滤波器类型: "madgwick" 或 "complementary"
+    filter_type: "madgwick"
+    # Madgwick 算法增益 (0.01-0.5)
+    # 较大值: 收敛快，噪声大
+    # 较小值: 收敛慢，更平滑
+    madgwick_beta: 0.1
+    # 陀螺仪低通滤波系数 (0-1)
+    # 较大值: 更接近原始值，响应快
+    # 较小值: 更平滑，响应慢
+    lowpass_alpha_gyro: 0.8
+    # 加速度计低通滤波系数 (0-1)
+    lowpass_alpha_accel: 0.5
+    
+    # ==================== 控制参数 ====================
+    # 控制循环频率 (Hz)
+    update_rate: 50.0
+    # 平移缩放因子 (m per rad per update)
+    # 控制 IMU 倾斜角度到末端移动距离的映射
+    translation_scale: 0.002
+    # 旋转缩放因子 (rad per rad per update)
+    rotation_scale: 0.02
+    # Z 轴移动缩放因子 (m per trigger per update)
+    z_scale: 0.003
+    # 死区 (rad, 约 3°)
+    deadzone: 0.05
+    
+    # ==================== 运动学参数 ====================
+    planning_group: "arm"
+    base_frame: "base_link"
+    end_effector_frame: "end_effector"
+    
+    # ==================== 调试参数 ====================
+    debug_mode: false
+
+
+# ==================== Joy 节点参数 ====================
+# Joy-Con 手柄需要通过 joy 节点发布按键数据
+joy_node:
+  ros__parameters:
+    # 设备路径 (通常是 /dev/input/js0 或 js1)
+    device_name: ""
+    device_id: 0
+    # 死区
+    deadzone: 0.1
+    # 自动重复率 (Hz)
+    autorepeat_rate: 20.0
+    # 粘滞按钮
+    sticky_buttons: false
+    # 强制反馈
+    coalesce_interval_ms: 1

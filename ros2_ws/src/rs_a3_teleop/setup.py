@@ -30,6 +30,9 @@ setup(
         'console_scripts': [
             'xbox_teleop_node = rs_a3_teleop.xbox_teleop_node:main',
             'xbox_servo_node = rs_a3_teleop.xbox_servo_node:main',
+            'joycon_imu_teleop = rs_a3_teleop.joycon_imu_teleop_node:main',
+            'joycon_imu_driver = rs_a3_teleop.joycon_imu_driver:main',
+            'joycon_visualizer = rs_a3_teleop.joycon_visualizer_node:main',
         ],
     },
 )
