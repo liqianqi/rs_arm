@@ -281,9 +281,25 @@ ros2 launch rs_a3_description rs_a3_control.launch.py use_mock_hardware:=false c
 | `max_acceleration` | 8.0 | 最大加速度限制 (rad/s²) |
 | `max_jerk` | 50.0 | 最大加加速度限制 (rad/s³) - S曲线规划 |
 | `s_curve_enabled` | true | 启用S曲线轨迹规划 |
-| `gravity_feedforward_ratio` | 0.5 | 重力补偿前馈比例 (0-1) |
+| `gravity_feedforward_ratio` | 0.5 | 重力补偿前馈比例 (0-1)，50%重力作为前馈力矩 |
+| `gravity_comp_L{n}_sin` | 见下表 | 关节n重力补偿sin系数 (Nm) |
+| `gravity_comp_L{n}_cos` | 0.0 | 关节n重力补偿cos系数 (Nm) |
+| `gravity_comp_L{n}_offset` | 0.0 | 关节n重力补偿偏移量 (Nm) |
 | `limit_margin` | 0.15 | 关节限位减速区域 (rad, ~8.6°) |
 | `limit_stop_margin` | 0.02 | 关节限位硬停止区域 (rad, ~1.1°) |
+
+**重力补偿参数默认值**:
+
+| 关节 | sin_coeff | 说明 |
+|------|-----------|------|
+| L1 | 0.0 | 基座绕Z轴旋转，无重力影响 |
+| L2 | 3.5 | 大臂俯仰，承受主要重力负载 |
+| L3 | 2.0 | 小臂俯仰 |
+| L4 | 0.0 | 腕部Roll |
+| L5 | 0.3 | 腕部Pitch |
+| L6 | 0.0 | 腕部Yaw |
+
+重力补偿公式: `τ_ff = (sin_coeff × sin(θ) + cos_coeff × cos(θ) + offset) × gravity_feedforward_ratio`
 
 ### 控制器参数 (`rs_a3_controllers.yaml`)
 

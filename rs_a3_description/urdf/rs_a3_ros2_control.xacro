@@ -24,6 +24,40 @@
           <param name="max_jerk">50.0</param>           <!-- 最大加加速度限制 rad/s³ -->
           <!-- 后备平滑滤波参数（S曲线禁用时使用） -->
           <param name="smoothing_alpha">0.2</param>     <!-- 低通滤波系数 -->
+          
+          <!-- 重力补偿前馈参数 (50%重力作为前馈力矩) -->
+          <param name="gravity_feedforward_ratio">0.5</param>  <!-- 50%重力补偿比例 -->
+          
+          <!-- L1关节 - 基座绕Z轴旋转，无重力影响 -->
+          <param name="gravity_comp_L1_sin">0.0</param>
+          <param name="gravity_comp_L1_cos">0.0</param>
+          <param name="gravity_comp_L1_offset">0.0</param>
+          
+          <!-- L2关节 - 大臂俯仰，承受主要重力负载 -->
+          <!-- τ = m*g*L*sin(θ)，需根据实际测量标定 -->
+          <param name="gravity_comp_L2_sin">3.5</param>
+          <param name="gravity_comp_L2_cos">0.0</param>
+          <param name="gravity_comp_L2_offset">0.0</param>
+          
+          <!-- L3关节 - 小臂俯仰 -->
+          <param name="gravity_comp_L3_sin">2.0</param>
+          <param name="gravity_comp_L3_cos">0.0</param>
+          <param name="gravity_comp_L3_offset">0.0</param>
+          
+          <!-- L4关节 - 腕部Roll -->
+          <param name="gravity_comp_L4_sin">0.0</param>
+          <param name="gravity_comp_L4_cos">0.0</param>
+          <param name="gravity_comp_L4_offset">0.0</param>
+          
+          <!-- L5关节 - 腕部Pitch -->
+          <param name="gravity_comp_L5_sin">0.3</param>
+          <param name="gravity_comp_L5_cos">0.0</param>
+          <param name="gravity_comp_L5_offset">0.0</param>
+          
+          <!-- L6关节 - 腕部Yaw -->
+          <param name="gravity_comp_L6_sin">0.0</param>
+          <param name="gravity_comp_L6_cos">0.0</param>
+          <param name="gravity_comp_L6_offset">0.0</param>
         </xacro:unless>
       </hardware>
 
