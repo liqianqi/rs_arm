@@ -24,13 +24,15 @@
 
 - **S曲线轨迹规划**: 标准7段S曲线速度规划，实现平滑无冲击运动
 - **重力补偿**: 支持关节重力前馈补偿，提升运动精度
+- **速度前馈**: 位置差分计算速度前馈，配合低通滤波减少运动抖动
 - **关节限位保护**: 软限位减速+硬限位停止，保护机械臂安全
 - **实时笛卡尔控制**: 50Hz Xbox手柄笛卡尔空间实时遥控
 - **MoveIt2集成**: 支持运动规划和避障功能
 - **笛卡尔速度映射**: 摇杆输入直接映射为末端执行器速度
 - **多级平滑滤波**: 输入平滑 + 关节输出平滑 + 加速度限制，消除抖动
-- **奇异点保护**: 自动检测并拒绝导致剧烈跳变的IK解
+- **奇异点保护**: 自动检测并拒绝导致剧烈跳变的IK解，连续拒绝50帧后自动恢复
 - **碰撞检测**: 启动后自动开启自碰撞和环境碰撞检测
+- **Home/零点精确回归**: 回到预设位置后从目标点精确开始控制
 
 ### 机械臂参数
 
@@ -273,9 +275,10 @@ ros2 launch rs_a3_description rs_a3_control.launch.py use_mock_hardware:=false c
 |------|--------|------|
 | `can_interface` | can0 | CAN 接口名称 |
 | `host_can_id` | 253 (0xFD) | 主机 CAN ID |
-| `position_kp` | 120.0 | 位置 PD 控制 Kp 增益 |
-| `position_kd` | 2.5 | 位置 PD 控制 Kd 增益 |
+| `position_kp` | 80.0 | 位置 PD 控制 Kp 增益 |
+| `position_kd` | 4.0 | 位置 PD 控制 Kd 增益 |
 | `velocity_limit` | 10.0 | 速度限制 (rad/s) |
+| `velocity_filter_alpha` | 0.1 | 速度前馈滤波系数 (0-1，减少起步反冲) |
 | `smoothing_alpha` | 0.08 | 低通滤波系数 (0-1) |
 | `max_velocity` | 2.0 | 最大速度限制 (rad/s) |
 | `max_acceleration` | 8.0 | 最大加速度限制 (rad/s²) |
@@ -287,6 +290,7 @@ ros2 launch rs_a3_description rs_a3_control.launch.py use_mock_hardware:=false c
 | `gravity_comp_L{n}_offset` | 0.0 | 关节n重力补偿偏移量 (Nm) |
 | `limit_margin` | 0.15 | 关节限位减速区域 (rad, ~8.6°) |
 | `limit_stop_margin` | 0.02 | 关节限位硬停止区域 (rad, ~1.1°) |
+| `can_frame_delay_us` | 50 | CAN帧间发送延迟 (μs，防止缓冲区拥塞) |
 
 **重力补偿参数默认值**:
 
@@ -393,10 +397,10 @@ base_link
 | 参数 | 范围 | 说明 |
 |------|------|------|
 | θ_target | ±12.57 rad | 目标位置 |
-| ω_target | 见电机规格 | 目标速度 (当前设为0) |
+| ω_target | 见电机规格 | 目标速度 (速度前馈，位置差分计算) |
 | Kp | 0~500 (RS00/RS05) | 位置刚度 |
 | Kd | 0~5 (RS00/RS05) | 阻尼系数 |
-| τ_ff | 见电机规格 | 前馈力矩 (当前设为0) |
+| τ_ff | 见电机规格 | 前馈力矩 (重力补偿) |
 
 ### 通信类型
 

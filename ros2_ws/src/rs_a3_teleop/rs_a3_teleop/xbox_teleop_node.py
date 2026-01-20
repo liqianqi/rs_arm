@@ -342,24 +342,27 @@ class XboxTeleopNode(Node):
                 self.get_logger().info(f'首次位姿同步: x={self.target_pose.pose.position.x:.4f}, '
                                      f'y={self.target_pose.pose.position.y:.4f}, '
                                      f'z={self.target_pose.pose.position.z:.4f}')
-                # 【关键】同时初始化IK种子为当前关节状态，确保首次IK解的连续性
-                # 注意：必须按self.joint_names的顺序提取，因为joint_states中的顺序可能不同
-                if self.current_joint_state:
-                    seed_positions = []
-                    for joint_name in self.joint_names:
-                        if joint_name in self.current_joint_state.name:
-                            idx = self.current_joint_state.name.index(joint_name)
-                            seed_positions.append(self.current_joint_state.position[idx])
-                        else:
-                            seed_positions.append(0.0)  # 默认值
-                    self.last_ik_joint_positions = seed_positions
-                    # 【关键修复】同时初始化关节平滑状态，避免首次IK解直接发送导致跳变
-                    self.smoothed_joint_positions = list(seed_positions)
-                    self.last_joint_velocities = [0.0] * len(seed_positions)
-                    self.get_logger().info(f'初始化IK种子和平滑状态: {[f"{p:.3f}" for p in self.last_ik_joint_positions]}')
-                    # 标记IK种子刚初始化，跳过首帧跳变检测
-                    self.ik_seed_just_initialized = True
-                    self.consecutive_ik_rejects = 0
+                # 【关键】如果IK种子已经被预设（如从home/zero回调中），则保留它
+                # 否则从当前关节状态初始化
+                if self.last_ik_joint_positions is None:
+                    # 只有IK种子未设置时，才从joint_states初始化
+                    if self.current_joint_state:
+                        seed_positions = []
+                        for joint_name in self.joint_names:
+                            if joint_name in self.current_joint_state.name:
+                                idx = self.current_joint_state.name.index(joint_name)
+                                seed_positions.append(self.current_joint_state.position[idx])
+                            else:
+                                seed_positions.append(0.0)  # 默认值
+                        self.last_ik_joint_positions = seed_positions
+                        self.smoothed_joint_positions = list(seed_positions)
+                        self.last_joint_velocities = [0.0] * len(seed_positions)
+                        self.get_logger().info(f'从关节状态初始化IK种子: {[f"{p:.3f}" for p in self.last_ik_joint_positions]}')
+                        self.ik_seed_just_initialized = True
+                        self.consecutive_ik_rejects = 0
+                else:
+                    # IK种子已预设（来自home/zero回调），只需同步笛卡尔位姿
+                    self.get_logger().info(f'使用预设IK种子: {[f"{p:.3f}" for p in self.last_ik_joint_positions]}')
                 self.pose_initialized = True
             
             return True
@@ -441,14 +444,20 @@ class XboxTeleopNode(Node):
                 
                 result = result_future.result()
                 self.is_going_home = False
-                self.pose_initialized = False  # 重置位姿初始化标记
-                self.smoothed_joint_positions = None  # 重置关节平滑状态
-                self.last_ik_joint_positions = None   # 重置IK种子
                 
                 # 检查结果
                 try:
                     if result and result.result and result.result.error_code.val == result.result.error_code.SUCCESS:
                         self.get_logger().info('✓ 已缓慢运动到零点位置！')
+                        # 【改进】直接使用零点位置作为起点，避免TF查询误差
+                        zero_joint_positions = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+                        self.last_ik_joint_positions = zero_joint_positions
+                        self.smoothed_joint_positions = list(zero_joint_positions)
+                        self.last_joint_velocities = [0.0] * 6
+                        self.ik_seed_just_initialized = True
+                        self.consecutive_ik_rejects = 0
+                        self.pose_initialized = False  # 仍需从TF获取笛卡尔位姿
+                        self.get_logger().info(f'IK种子已设置为零点位置')
                         # 运动成功后开启碰撞检测
                         if self.enable_collision_check:
                             self.collision_check_active = True
@@ -459,14 +468,24 @@ class XboxTeleopNode(Node):
                         if result and result.result and hasattr(result.result, 'error_code'):
                             error_code = result.result.error_code.val
                         self.get_logger().warn(f'零点运动执行失败: error_code={error_code}')
+                        # 失败时重置状态
+                        self.pose_initialized = False
+                        self.smoothed_joint_positions = None
+                        self.last_ik_joint_positions = None
                 except Exception as e:
                     self.get_logger().warn(f'零点运动结果解析失败: {e}')
+                    self.pose_initialized = False
+                    self.smoothed_joint_positions = None
+                    self.last_ik_joint_positions = None
             else:
                 self.get_logger().warn(f'零点运动请求被拒绝，等待重试...')
                 time.sleep(2.0)  # 等待后重试
         
         self.get_logger().error('零点运动多次尝试后失败，请手动控制机械臂')
         self.is_going_home = False
+        self.pose_initialized = False
+        self.smoothed_joint_positions = None
+        self.last_ik_joint_positions = None
         return False
     
     def joy_callback(self, msg):
@@ -589,14 +608,24 @@ class XboxTeleopNode(Node):
         """回home结果回调"""
         result = future.result().result
         self.is_going_home = False
-        self.pose_initialized = False  # 重置位姿初始化标记
-        self.smoothed_joint_positions = None  # 重置关节平滑状态
-        self.last_ik_joint_positions = None   # 重置IK种子
         
         if result.error_code.val == result.error_code.SUCCESS:
             self.get_logger().info('已回到初始位置！')
+            # 【改进】直接使用home位置作为起点，避免TF查询误差
+            home_joint_positions = [0.0, 0.785, -0.785, 0.0, 0.0, 0.0]
+            self.last_ik_joint_positions = home_joint_positions
+            self.smoothed_joint_positions = list(home_joint_positions)
+            self.last_joint_velocities = [0.0] * 6
+            self.ik_seed_just_initialized = True
+            self.consecutive_ik_rejects = 0
+            # 仍然让sync_current_pose()获取笛卡尔位姿（从TF）
+            self.pose_initialized = False
+            self.get_logger().info(f'IK种子已设置为home位置: {[f"{p:.3f}" for p in home_joint_positions]}')
         else:
             self.get_logger().warn(f'回home失败: error_code={result.error_code.val}')
+            self.pose_initialized = False
+            self.smoothed_joint_positions = None
+            self.last_ik_joint_positions = None
     
     def go_zero(self):
         """回到零点位置（所有关节归零）"""
@@ -661,14 +690,24 @@ class XboxTeleopNode(Node):
         """回零点结果回调"""
         result = future.result().result
         self.is_going_home = False
-        self.pose_initialized = False  # 重置位姿初始化标记
-        self.smoothed_joint_positions = None  # 重置关节平滑状态
-        self.last_ik_joint_positions = None   # 重置IK种子
         
         if result.error_code.val == result.error_code.SUCCESS:
             self.get_logger().info('已回到零点位置！')
+            # 【改进】直接使用零点位置作为起点，避免TF查询误差
+            zero_joint_positions = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+            self.last_ik_joint_positions = zero_joint_positions
+            self.smoothed_joint_positions = list(zero_joint_positions)
+            self.last_joint_velocities = [0.0] * 6
+            self.ik_seed_just_initialized = True
+            self.consecutive_ik_rejects = 0
+            # 仍然让sync_current_pose()获取笛卡尔位姿（从TF）
+            self.pose_initialized = False
+            self.get_logger().info(f'IK种子已设置为零点位置: {[f"{p:.3f}" for p in zero_joint_positions]}')
         else:
             self.get_logger().warn(f'回零点失败: error_code={result.error_code.val}')
+            self.pose_initialized = False
+            self.smoothed_joint_positions = None
+            self.last_ik_joint_positions = None
         
     def update_callback(self):
         """定期更新回调"""
@@ -970,6 +1009,13 @@ class XboxTeleopNode(Node):
                             self.get_logger().warn(
                                 f'检测到奇异点区域，IK解跳变={max_diff:.3f}rad，已保护{self.consecutive_ik_rejects}帧'
                             )
+                        # 【自动恢复机制】连续拒绝超过50帧后，重新同步IK种子
+                        if self.consecutive_ik_rejects >= 50:
+                            self.get_logger().warn('连续拒绝IK解超过50帧，自动重新同步位姿...')
+                            self.pose_initialized = False
+                            self.smoothed_joint_positions = None
+                            self.last_ik_joint_positions = None
+                            self.consecutive_ik_rejects = 0
                         # 拒绝该解，继续使用上一次的关节位置
                         return
                 else:

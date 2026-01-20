@@ -95,7 +95,7 @@ hardware_interface::CallbackReturn RsA3HardwareInterface::on_init(
   last_cmd_positions_.resize(num_joints, 0.0);       // 上一周期命令位置
   cmd_velocities_.resize(num_joints, 0.0);           // 计算的命令速度
   filtered_cmd_velocities_.resize(num_joints, 0.0);  // 滤波后的命令速度
-  velocity_filter_alpha_ = 0.3;                      // 速度滤波系数，较大值响应更快
+  velocity_filter_alpha_ = 0.1;                      // 速度滤波系数，降低以减少起步反冲
   
   // 默认参数
   smoothing_alpha_ = 0.08;      // 平滑系数（降低使运动更平滑）
