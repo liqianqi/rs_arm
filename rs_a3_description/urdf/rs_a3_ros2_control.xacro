@@ -14,8 +14,8 @@
           <plugin>rs_a3_hardware/RsA3HardwareInterface</plugin>
           <param name="can_interface">${can_interface}</param>
           <param name="host_can_id">${host_can_id}</param>
-          <param name="position_kp">120.0</param>
-          <param name="position_kd">2.5</param>
+          <param name="position_kp">80.0</param>
+          <param name="position_kd">4.0</param>
           <param name="velocity_limit">10.0</param>
           <!-- S曲线轨迹规划参数 -->
           <param name="s_curve_enabled">false</param>   <!-- 暂时禁用，避免与MoveIt轨迹冲突 -->

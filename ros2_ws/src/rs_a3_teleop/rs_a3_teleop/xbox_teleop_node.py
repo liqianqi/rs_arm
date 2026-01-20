@@ -353,7 +353,10 @@ class XboxTeleopNode(Node):
                         else:
                             seed_positions.append(0.0)  # 默认值
                     self.last_ik_joint_positions = seed_positions
-                    self.get_logger().info(f'初始化IK种子: {[f"{p:.3f}" for p in self.last_ik_joint_positions]}')
+                    # 【关键修复】同时初始化关节平滑状态，避免首次IK解直接发送导致跳变
+                    self.smoothed_joint_positions = list(seed_positions)
+                    self.last_joint_velocities = [0.0] * len(seed_positions)
+                    self.get_logger().info(f'初始化IK种子和平滑状态: {[f"{p:.3f}" for p in self.last_ik_joint_positions]}')
                     # 标记IK种子刚初始化，跳过首帧跳变检测
                     self.ik_seed_just_initialized = True
                     self.consecutive_ik_rejects = 0

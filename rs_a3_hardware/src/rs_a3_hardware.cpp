@@ -91,6 +91,12 @@ hardware_interface::CallbackReturn RsA3HardwareInterface::on_init(
   smoothed_velocities_.resize(num_joints, 0.0);
   smoothed_accelerations_.resize(num_joints, 0.0);  // S曲线规划用
   
+  // 初始化速度前馈计算相关变量
+  last_cmd_positions_.resize(num_joints, 0.0);       // 上一周期命令位置
+  cmd_velocities_.resize(num_joints, 0.0);           // 计算的命令速度
+  filtered_cmd_velocities_.resize(num_joints, 0.0);  // 滤波后的命令速度
+  velocity_filter_alpha_ = 0.3;                      // 速度滤波系数，较大值响应更快
+  
   // 默认参数
   smoothing_alpha_ = 0.08;      // 平滑系数（降低使运动更平滑）
   max_velocity_ = 2.0;          // 最大速度 2 rad/s
@@ -646,6 +652,10 @@ hardware_interface::return_type RsA3HardwareInterface::write(
       smoothed_velocities_[i] = 0.0;
       smoothed_accelerations_[i] = 0.0;
       
+      // 初始化速度前馈相关变量，避免第一次计算产生跳变
+      last_cmd_positions_[i] = hw_commands_positions_[i];
+      filtered_cmd_velocities_[i] = 0.0;
+      
       // 初始化S曲线生成器
       if (s_curve_enabled_ && i < s_curve_generators_.size()) {
         s_curve_generators_[i]->initialize(hw_commands_positions_[i], 0.0, 0.0);
@@ -691,12 +701,28 @@ hardware_interface::return_type RsA3HardwareInterface::write(
     auto params = getMotorParams(config.motor_type);
     cmd_position = std::clamp(cmd_position, params.p_min, params.p_max);
     
+    // ============ 计算速度前馈（位置差分）============
+    // 使用关节坐标计算速度，然后转换方向
+    double raw_cmd_velocity = (smoothed_positions_[i] - last_cmd_positions_[i]) / dt;
+    last_cmd_positions_[i] = smoothed_positions_[i];
+    
+    // 限制速度在合理范围内
+    raw_cmd_velocity = std::clamp(raw_cmd_velocity, -velocity_limit_, velocity_limit_);
+    
+    // 对速度进行低通滤波，避免速度命令突变
+    double filtered_velocity = velocity_filter_alpha_ * raw_cmd_velocity 
+                             + (1.0 - velocity_filter_alpha_) * filtered_cmd_velocities_[i];
+    filtered_cmd_velocities_[i] = filtered_velocity;
+    
+    // 转换为电机坐标系的速度（乘以方向）
+    double motor_cmd_velocity = filtered_velocity * config.direction;
+    
     // Debug: 定期输出日志
     if (write_counter % 1000 == 0 && i == 0) {
       RCLCPP_DEBUG(rclcpp::get_logger("RsA3HardwareInterface"),
-                  "[S-Curve] cmd=%.4f, smooth=%.4f, vel=%.3f, acc=%.3f", 
+                  "[Velocity FF] cmd=%.4f, smooth=%.4f, vel=%.3f, filtered_vel=%.3f", 
                   hw_commands_positions_[0], smoothed_positions_[0], 
-                  smoothed_velocities_[0], smoothed_accelerations_[0]);
+                  raw_cmd_velocity, filtered_velocity);
     }
     
     // ============ 计算重力补偿力矩（按比例作为前馈）============
@@ -727,11 +753,14 @@ hardware_interface::return_type RsA3HardwareInterface::write(
       final_cmd_position = cmd_position;
     }
     
+    // 计算最终发送的速度前馈（零力矩模式下发送0速度）
+    double final_cmd_velocity = zero_torque_mode_ ? 0.0 : motor_cmd_velocity;
+    
     if (!can_driver_->sendMotionControl(
           config.motor_id,
           config.motor_type,
           final_cmd_position,
-          0.0,       // velocity = 0
+          final_cmd_velocity,  // 速度前馈（位置差分计算）
           motor_kp,
           motor_kd,
           cmd_torque // 重力补偿前馈力矩
@@ -743,6 +772,9 @@ hardware_interface::return_type RsA3HardwareInterface::write(
           "Failed to send motion control command to motor %d", config.motor_id);
       }
     }
+    
+    // 添加帧间微延迟，防止CAN缓冲区拥塞（6帧×50μs=300μs，远小于5ms控制周期）
+    usleep(50);
   }
 
   // 发布调试信息（每10次发布一次，约20Hz）

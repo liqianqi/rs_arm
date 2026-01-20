@@ -117,6 +117,12 @@ private:
   std::vector<double> smoothed_positions_;    // 平滑后的位置命令
   std::vector<double> smoothed_velocities_;   // 平滑后的速度（用于加速度限制）
   std::vector<double> smoothed_accelerations_; // 平滑后的加速度（用于S曲线规划）
+  
+  // 速度前馈计算相关
+  std::vector<double> last_cmd_positions_;     // 上一周期的命令位置（用于计算速度前馈）
+  std::vector<double> cmd_velocities_;         // 计算出的命令速度
+  std::vector<double> filtered_cmd_velocities_; // 滤波后的命令速度
+  double velocity_filter_alpha_;               // 速度滤波系数 (0-1)
   double smoothing_alpha_;                    // 平滑系数 (0-1，越小越平滑)
   double max_velocity_;                       // 最大速度限制 (rad/s)
   double max_acceleration_;                   // 最大加速度限制 (rad/s²)
