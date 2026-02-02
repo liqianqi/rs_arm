@@ -1,0 +1,47 @@
+[0.397s] Invoking command in '/home/ubuntu/rs_arm/src/rs_a3_teleop': PYTHONPATH=/home/ubuntu/rs_arm/build/rs_a3_teleop/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ubuntu/rs_arm/install/rs_a3_teleop/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/rs_a3_teleop build --build-base /home/ubuntu/rs_arm/build/rs_a3_teleop/build install --record /home/ubuntu/rs_arm/build/rs_a3_teleop/install.log --single-version-externally-managed install_data
+[0.513s] running egg_info
+[0.520s] writing ../../build/rs_a3_teleop/rs_a3_teleop.egg-info/PKG-INFO
+[0.520s] writing dependency_links to ../../build/rs_a3_teleop/rs_a3_teleop.egg-info/dependency_links.txt
+[0.521s] writing entry points to ../../build/rs_a3_teleop/rs_a3_teleop.egg-info/entry_points.txt
+[0.521s] writing requirements to ../../build/rs_a3_teleop/rs_a3_teleop.egg-info/requires.txt
+[0.522s] writing top-level names to ../../build/rs_a3_teleop/rs_a3_teleop.egg-info/top_level.txt
+[0.540s] reading manifest file '../../build/rs_a3_teleop/rs_a3_teleop.egg-info/SOURCES.txt'
+[0.540s] writing manifest file '../../build/rs_a3_teleop/rs_a3_teleop.egg-info/SOURCES.txt'
+[0.540s] running build
+[0.540s] running build_py
+[0.540s] copying rs_a3_teleop/xbox_servo_node.py -> /home/ubuntu/rs_arm/build/rs_a3_teleop/build/lib/rs_a3_teleop
+[0.540s] copying rs_a3_teleop/__init__.py -> /home/ubuntu/rs_arm/build/rs_a3_teleop/build/lib/rs_a3_teleop
+[0.540s] copying rs_a3_teleop/xbox_teleop_node.py -> /home/ubuntu/rs_arm/build/rs_a3_teleop/build/lib/rs_a3_teleop
+[0.540s] copying rs_a3_teleop/joycon_imu_driver.py -> /home/ubuntu/rs_arm/build/rs_a3_teleop/build/lib/rs_a3_teleop
+[0.540s] copying rs_a3_teleop/joycon_imu_teleop_node.py -> /home/ubuntu/rs_arm/build/rs_a3_teleop/build/lib/rs_a3_teleop
+[0.541s] copying rs_a3_teleop/imu_processor.py -> /home/ubuntu/rs_arm/build/rs_a3_teleop/build/lib/rs_a3_teleop
+[0.541s] copying rs_a3_teleop/joycon_visualizer_node.py -> /home/ubuntu/rs_arm/build/rs_a3_teleop/build/lib/rs_a3_teleop
+[0.541s] copying rs_a3_teleop/xbox_servo_teleop.py -> /home/ubuntu/rs_arm/build/rs_a3_teleop/build/lib/rs_a3_teleop
+[0.541s] running install
+[0.541s] running install_lib
+[0.549s] running install_data
+[0.549s] copying resource/rs_a3_teleop -> /home/ubuntu/rs_arm/install/rs_a3_teleop/share/ament_index/resource_index/packages
+[0.550s] copying package.xml -> /home/ubuntu/rs_arm/install/rs_a3_teleop/share/rs_a3_teleop
+[0.550s] copying launch/simple_teleop.launch.py -> /home/ubuntu/rs_arm/install/rs_a3_teleop/share/rs_a3_teleop/launch
+[0.550s] copying launch/servo_teleop.launch.py -> /home/ubuntu/rs_arm/install/rs_a3_teleop/share/rs_a3_teleop/launch
+[0.550s] copying launch/joycon_imu_teleop.launch.py -> /home/ubuntu/rs_arm/install/rs_a3_teleop/share/rs_a3_teleop/launch
+[0.550s] copying launch/sim_teleop.launch.py -> /home/ubuntu/rs_arm/install/rs_a3_teleop/share/rs_a3_teleop/launch
+[0.550s] copying launch/xbox_servo_teleop.launch.py -> /home/ubuntu/rs_arm/install/rs_a3_teleop/share/rs_a3_teleop/launch
+[0.550s] copying launch/xbox_teleop.launch.py -> /home/ubuntu/rs_arm/install/rs_a3_teleop/share/rs_a3_teleop/launch
+[0.550s] copying launch/real_teleop.launch.py -> /home/ubuntu/rs_arm/install/rs_a3_teleop/share/rs_a3_teleop/launch
+[0.550s] copying launch/complete_teleop.launch.py -> /home/ubuntu/rs_arm/install/rs_a3_teleop/share/rs_a3_teleop/launch
+[0.550s] copying config/joycon_imu_teleop.yaml -> /home/ubuntu/rs_arm/install/rs_a3_teleop/share/rs_a3_teleop/config
+[0.550s] copying config/xbox_servo_teleop.yaml -> /home/ubuntu/rs_arm/install/rs_a3_teleop/share/rs_a3_teleop/config
+[0.550s] copying config/moveit_servo_config.yaml -> /home/ubuntu/rs_arm/install/rs_a3_teleop/share/rs_a3_teleop/config
+[0.550s] copying config/xbox_teleop.yaml -> /home/ubuntu/rs_arm/install/rs_a3_teleop/share/rs_a3_teleop/config
+[0.550s] running install_egg_info
+[0.561s] removing '/home/ubuntu/rs_arm/install/rs_a3_teleop/lib/python3.10/site-packages/rs_a3_teleop-0.0.1-py3.10.egg-info' (and everything under it)
+[0.561s] Copying ../../build/rs_a3_teleop/rs_a3_teleop.egg-info to /home/ubuntu/rs_arm/install/rs_a3_teleop/lib/python3.10/site-packages/rs_a3_teleop-0.0.1-py3.10.egg-info
+[0.561s] running install_scripts
+[0.628s] Installing joycon_imu_driver script to /home/ubuntu/rs_arm/install/rs_a3_teleop/lib/rs_a3_teleop
+[0.628s] Installing joycon_imu_teleop script to /home/ubuntu/rs_arm/install/rs_a3_teleop/lib/rs_a3_teleop
+[0.628s] Installing joycon_visualizer script to /home/ubuntu/rs_arm/install/rs_a3_teleop/lib/rs_a3_teleop
+[0.628s] Installing xbox_servo_node script to /home/ubuntu/rs_arm/install/rs_a3_teleop/lib/rs_a3_teleop
+[0.629s] Installing xbox_teleop_node script to /home/ubuntu/rs_arm/install/rs_a3_teleop/lib/rs_a3_teleop
+[0.629s] writing list of installed files to '/home/ubuntu/rs_arm/build/rs_a3_teleop/install.log'
+[0.648s] Invoked command in '/home/ubuntu/rs_arm/src/rs_a3_teleop' returned '0': PYTHONPATH=/home/ubuntu/rs_arm/build/rs_a3_teleop/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ubuntu/rs_arm/install/rs_a3_teleop/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/rs_a3_teleop build --build-base /home/ubuntu/rs_arm/build/rs_a3_teleop/build install --record /home/ubuntu/rs_arm/build/rs_a3_teleop/install.log --single-version-externally-managed install_data

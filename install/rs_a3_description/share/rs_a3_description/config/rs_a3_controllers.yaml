@@ -1,0 +1,57 @@
+# ros2_control controller configuration for RS-A3 robot arm
+
+controller_manager:
+  ros__parameters:
+    update_rate: 200  # Hz - 提升至200Hz以获得更平滑的控制
+
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+    arm_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+arm_controller:
+  ros__parameters:
+    joints:
+      - L1_joint
+      - L2_joint
+      - L3_joint
+      - L4_joint
+      - L5_joint
+      - L6_joint
+
+    command_interfaces:
+      - position
+
+    state_interfaces:
+      - position
+      - velocity
+
+    # 开环控制 - 忽略反馈位置，消除反馈噪声引起的命令抖动
+    # 底层电机驱动器仍有闭环PID控制，不会失控
+    open_loop_control: true
+    allow_nonzero_velocity_at_trajectory_end: true  # 允许轨迹末端有非零速度，提高平滑度
+    
+    # 轨迹插值设置 - 使用样条插值实现更平滑的运动
+    interpolation_method: splines
+    
+    # 发布频率设置
+    state_publish_rate: 200.0   # 状态发布频率 (Hz)
+    action_monitor_rate: 50.0   # Action监控频率 (Hz)
+    
+    # 目标到达容差设置 - 放宽容差以减少抖动
+    constraints:
+      stopped_velocity_tolerance: 0.1  # rad/s - 放宽速度容差
+      goal_time: 0.0  # 0 = 不检查时间，只检查位置
+      L1_joint:
+        goal: 0.03  # rad 位置容差 - 放宽
+      L2_joint:
+        goal: 0.03
+      L3_joint:
+        goal: 0.03
+      L4_joint:
+        goal: 0.03
+      L5_joint:
+        goal: 0.03
+      L6_joint:
+        goal: 0.03

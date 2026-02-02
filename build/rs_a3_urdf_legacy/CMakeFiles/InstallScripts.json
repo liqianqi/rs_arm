@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/ubuntu/rs_arm/build/rs_a3_urdf_legacy/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

@@ -1,0 +1,50 @@
+# Xbox手柄控制参数配置
+
+xbox_teleop_node:
+  ros__parameters:
+    # 更新频率 (Hz) - 50Hz提高响应速度
+    update_rate: 50.0
+    
+    # 使用快速IK模式（true=50Hz IK直接控制，false=传统路径规划）
+    # 快速IK模式：每帧调用IK服务计算关节位置，直接发布到控制器，可达真正的50Hz
+    # 传统模式：使用GetCartesianPath服务规划完整路径，实际频率约5-10Hz
+    use_fast_ik_mode: true
+    
+    # ============ 笛卡尔速度参数（实际物理单位）============
+    # 摇杆偏移量直接映射为末端速度，松开摇杆速度立即归零
+    max_linear_velocity: 0.15      # 最大线速度 m/s（满杆时的末端移动速度）
+    max_angular_velocity: 1.5      # 最大角速度 rad/s（满杆时的末端旋转速度）
+    
+    # ============ 关节输出平滑参数 ============
+    # 对IK解出的关节位置进行平滑，避免关节跳变
+    joint_smoothing_alpha: 0.15    # 关节平滑系数 (0-1)，越小越平滑但响应越慢
+    max_joint_velocity: 1.5        # 单关节最大速度限制 rad/s（防止关节速度过快）
+    max_joint_acceleration: 5.0    # 单关节最大加速度限制 rad/s²（防止加速度突变）
+    
+    # ============ 输入平滑参数 ============
+    # 对摇杆输入进行平滑滤波（可选，与关节平滑独立）
+    input_smoothing_factor: 0.3    # 输入平滑系数 (0-1)，越小越平滑
+    
+    # ============ 奇异点保护参数 ============
+    # 检测并拒绝IK解跳变，防止奇异点附近的剧烈运动
+    max_ik_jump_threshold: 0.5     # 单关节最大允许跳变 rad（超过则拒绝该IK解）
+    singularity_warning_count: 5   # 连续拒绝次数超过此值时发出警告
+    
+    # ============ 碰撞检测参数 ============
+    # 在初始化运动到零点后启用碰撞检测
+    enable_collision_check: true   # 是否在初始化后启用碰撞检测
+    
+    # ============ 其他参数 ============
+    # MoveIt规划组名称
+    planning_group: "arm"
+    
+    # 坐标系
+    base_frame: "base_link"
+    end_effector_frame: "end_effector"
+    
+    # 摇杆死区 (0-1)
+    # 降低死区让控制更灵敏，同时保留基本的抗漂移能力
+    deadzone: 0.15
+    
+    # 调试模式 - 显示摇杆原始输入
+    debug_input: false

@@ -1,0 +1,206 @@
+"""
+RS-A3 Robot Arm MoveIt Demo Launch File
+
+启动MoveIt运动规划界面 (仿真模式)
+"""
+
+import os
+from launch import LaunchDescription
+from launch.actions import DeclareLaunchArgument, RegisterEventHandler
+from launch.event_handlers import OnProcessExit
+from launch.conditions import IfCondition
+from launch.substitutions import Command, FindExecutable, LaunchConfiguration, PathJoinSubstitution
+from launch_ros.actions import Node
+from launch_ros.substitutions import FindPackageShare
+from ament_index_python.packages import get_package_share_directory
+import yaml
+
+
+def load_yaml(package_name, file_path):
+    package_path = get_package_share_directory(package_name)
+    absolute_file_path = os.path.join(package_path, file_path)
+    try:
+        with open(absolute_file_path, 'r') as file:
+            return yaml.safe_load(file)
+    except EnvironmentError:
+        return None
+
+
+def generate_launch_description():
+    # Declare arguments
+    declared_arguments = []
+    
+    declared_arguments.append(
+        DeclareLaunchArgument(
+            "use_rviz",
+            default_value="true",
+            description="Start RViz2 with MoveIt plugin",
+        )
+    )
+
+    use_rviz = LaunchConfiguration("use_rviz")
+
+    # Get URDF via xacro (mock hardware for demo)
+    robot_description_content = Command(
+        [
+            PathJoinSubstitution([FindExecutable(name="xacro")]),
+            " ",
+            PathJoinSubstitution(
+                [FindPackageShare("rs_a3_description"), "urdf", "rs_a3.urdf.xacro"]
+            ),
+            " use_mock_hardware:=true",
+        ]
+    )
+    robot_description = {"robot_description": robot_description_content}
+
+    # SRDF
+    robot_description_semantic_content = Command(
+        [
+            "cat ",
+            PathJoinSubstitution(
+                [FindPackageShare("rs_a3_moveit_config"), "config", "rs_a3.srdf"]
+            ),
+        ]
+    )
+    robot_description_semantic = {"robot_description_semantic": robot_description_semantic_content}
+
+    # Kinematics
+    kinematics_yaml = load_yaml("rs_a3_moveit_config", "config/kinematics.yaml")
+
+    # Joint limits
+    joint_limits_yaml = load_yaml("rs_a3_moveit_config", "config/joint_limits.yaml")
+    robot_description_planning = {"robot_description_planning": joint_limits_yaml}
+
+    # Planning
+    ompl_planning_yaml = load_yaml("rs_a3_moveit_config", "config/ompl_planning.yaml")
+    ompl_planning_pipeline_config = {"move_group": ompl_planning_yaml}
+
+    # Controllers
+    moveit_controllers_yaml = load_yaml("rs_a3_moveit_config", "config/moveit_controllers.yaml")
+
+    # Trajectory execution
+    trajectory_execution = {
+        "moveit_manage_controllers": True,
+        "trajectory_execution.allowed_execution_duration_scaling": 2.0,  # 增加到2倍允许更宽松的执行时间
+        "trajectory_execution.allowed_goal_duration_margin": 1.0,  # 增加目标持续时间容限
+        "trajectory_execution.allowed_start_tolerance": 0.05,  # 放宽起始容差
+    }
+
+    # Planning scene
+    planning_scene_monitor_parameters = {
+        "publish_planning_scene": True,
+        "publish_geometry_updates": True,
+        "publish_state_updates": True,
+        "publish_transforms_updates": True,
+    }
+
+    # ros2_control controllers config
+    ros2_controllers_yaml = PathJoinSubstitution(
+        [FindPackageShare("rs_a3_description"), "config", "rs_a3_controllers.yaml"]
+    )
+
+    # RViz config
+    rviz_config_file = PathJoinSubstitution(
+        [FindPackageShare("rs_a3_moveit_config"), "config", "moveit.rviz"]
+    )
+
+    # Nodes
+    move_group_node = Node(
+        package="moveit_ros_move_group",
+        executable="move_group",
+        output="screen",
+        parameters=[
+            robot_description,
+            robot_description_semantic,
+            robot_description_planning,
+            kinematics_yaml,
+            ompl_planning_pipeline_config,
+            trajectory_execution,
+            moveit_controllers_yaml,
+            planning_scene_monitor_parameters,
+        ],
+    )
+
+    robot_state_publisher_node = Node(
+        package="robot_state_publisher",
+        executable="robot_state_publisher",
+        output="both",
+        parameters=[robot_description],
+    )
+
+    # Static transform: world -> base_link
+    # This is required for RViz Fixed Frame "world" to work
+    static_tf_node = Node(
+        package="tf2_ros",
+        executable="static_transform_publisher",
+        arguments=["0", "0", "0", "0", "0", "0", "world", "base_link"],
+        output="log",
+    )
+
+    # ros2_control node
+    ros2_control_node = Node(
+        package="controller_manager",
+        executable="ros2_control_node",
+        parameters=[robot_description, ros2_controllers_yaml],
+        output="both",
+    )
+
+    # Spawner nodes - add timeout for controller_manager to be ready
+    joint_state_broadcaster_spawner = Node(
+        package="controller_manager",
+        executable="spawner",
+        arguments=["joint_state_broadcaster", "-c", "/controller_manager", 
+                   "--controller-manager-timeout", "120"],
+    )
+
+    arm_controller_spawner = Node(
+        package="controller_manager",
+        executable="spawner",
+        arguments=["arm_controller", "-c", "/controller_manager", 
+                   "--controller-manager-timeout", "120"],
+    )
+
+    rviz_node = Node(
+        package="rviz2",
+        executable="rviz2",
+        name="rviz2",
+        output="log",
+        arguments=["-d", rviz_config_file],
+        parameters=[
+            robot_description,
+            robot_description_semantic,
+            robot_description_planning,
+            kinematics_yaml,
+        ],
+        condition=IfCondition(use_rviz),
+    )
+
+    # Event handlers for sequential startup
+    # Start arm_controller after joint_state_broadcaster is ready
+    delay_arm_controller = RegisterEventHandler(
+        event_handler=OnProcessExit(
+            target_action=joint_state_broadcaster_spawner,
+            on_exit=[arm_controller_spawner],
+        )
+    )
+
+    # Start move_group after arm_controller is ready
+    delay_move_group = RegisterEventHandler(
+        event_handler=OnProcessExit(
+            target_action=arm_controller_spawner,
+            on_exit=[move_group_node],
+        )
+    )
+
+    nodes = [
+        robot_state_publisher_node,
+        static_tf_node,
+        ros2_control_node,
+        joint_state_broadcaster_spawner,
+        delay_arm_controller,
+        delay_move_group,
+        rviz_node,
+    ]
+
+    return LaunchDescription(declared_arguments + nodes)
+

@@ -1,0 +1,84 @@
+[0.647s] Invoking command in '/home/ubuntu/rs_arm/src/rs_a3_web_ui': PYTHONPATH=/home/ubuntu/rs_arm/build/rs_a3_web_ui/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ubuntu/rs_arm/install/rs_a3_web_ui/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/rs_a3_web_ui build --build-base /home/ubuntu/rs_arm/build/rs_a3_web_ui/build install --record /home/ubuntu/rs_arm/build/rs_a3_web_ui/install.log --single-version-externally-managed install_data
+[0.771s] /home/ubuntu/.local/lib/python3.10/site-packages/setuptools/_distutils/dist.py:289: UserWarning: Unknown distribution option: 'tests_require'
+[0.771s]   warnings.warn(msg)
+[0.825s] running egg_info
+[0.835s] creating ../../build/rs_a3_web_ui/rs_a3_web_ui.egg-info
+[0.835s] writing ../../build/rs_a3_web_ui/rs_a3_web_ui.egg-info/PKG-INFO
+[0.836s] writing dependency_links to ../../build/rs_a3_web_ui/rs_a3_web_ui.egg-info/dependency_links.txt
+[0.836s] writing entry points to ../../build/rs_a3_web_ui/rs_a3_web_ui.egg-info/entry_points.txt
+[0.836s] writing requirements to ../../build/rs_a3_web_ui/rs_a3_web_ui.egg-info/requires.txt
+[0.836s] writing top-level names to ../../build/rs_a3_web_ui/rs_a3_web_ui.egg-info/top_level.txt
+[0.836s] writing manifest file '../../build/rs_a3_web_ui/rs_a3_web_ui.egg-info/SOURCES.txt'
+[0.855s] reading manifest file '../../build/rs_a3_web_ui/rs_a3_web_ui.egg-info/SOURCES.txt'
+[0.856s] writing manifest file '../../build/rs_a3_web_ui/rs_a3_web_ui.egg-info/SOURCES.txt'
+[0.856s] running build
+[0.856s] running build_py
+[0.856s] creating /home/ubuntu/rs_arm/build/rs_a3_web_ui/build/lib/rs_a3_web_ui
+[0.856s] copying rs_a3_web_ui/__init__.py -> /home/ubuntu/rs_arm/build/rs_a3_web_ui/build/lib/rs_a3_web_ui
+[0.856s] copying rs_a3_web_ui/ros2_bridge.py -> /home/ubuntu/rs_arm/build/rs_a3_web_ui/build/lib/rs_a3_web_ui
+[0.856s] copying rs_a3_web_ui/web_server.py -> /home/ubuntu/rs_arm/build/rs_a3_web_ui/build/lib/rs_a3_web_ui
+[0.856s] running install
+[0.860s] running install_lib
+[0.867s] creating /home/ubuntu/rs_arm/install/rs_a3_web_ui/lib/python3.10/site-packages/rs_a3_web_ui
+[0.867s] copying /home/ubuntu/rs_arm/build/rs_a3_web_ui/build/lib/rs_a3_web_ui/__init__.py -> /home/ubuntu/rs_arm/install/rs_a3_web_ui/lib/python3.10/site-packages/rs_a3_web_ui
+[0.867s] copying /home/ubuntu/rs_arm/build/rs_a3_web_ui/build/lib/rs_a3_web_ui/ros2_bridge.py -> /home/ubuntu/rs_arm/install/rs_a3_web_ui/lib/python3.10/site-packages/rs_a3_web_ui
+[0.867s] copying /home/ubuntu/rs_arm/build/rs_a3_web_ui/build/lib/rs_a3_web_ui/web_server.py -> /home/ubuntu/rs_arm/install/rs_a3_web_ui/lib/python3.10/site-packages/rs_a3_web_ui
+[0.867s] byte-compiling /home/ubuntu/rs_arm/install/rs_a3_web_ui/lib/python3.10/site-packages/rs_a3_web_ui/__init__.py to __init__.cpython-310.pyc
+[0.867s] byte-compiling /home/ubuntu/rs_arm/install/rs_a3_web_ui/lib/python3.10/site-packages/rs_a3_web_ui/ros2_bridge.py to ros2_bridge.cpython-310.pyc
+[0.869s] byte-compiling /home/ubuntu/rs_arm/install/rs_a3_web_ui/lib/python3.10/site-packages/rs_a3_web_ui/web_server.py to web_server.cpython-310.pyc
+[0.869s] running install_data
+[0.870s] creating /home/ubuntu/rs_arm/install/rs_a3_web_ui/share/ament_index/resource_index/packages
+[0.870s] copying resource/rs_a3_web_ui -> /home/ubuntu/rs_arm/install/rs_a3_web_ui/share/ament_index/resource_index/packages
+[0.870s] copying package.xml -> /home/ubuntu/rs_arm/install/rs_a3_web_ui/share/rs_a3_web_ui
+[0.870s] creating /home/ubuntu/rs_arm/install/rs_a3_web_ui/share/rs_a3_web_ui/launch
+[0.870s] copying launch/web_ui.launch.py -> /home/ubuntu/rs_arm/install/rs_a3_web_ui/share/rs_a3_web_ui/launch
+[0.870s] creating /home/ubuntu/rs_arm/install/rs_a3_web_ui/share/rs_a3_web_ui/templates
+[0.870s] copying templates/index.html -> /home/ubuntu/rs_arm/install/rs_a3_web_ui/share/rs_a3_web_ui/templates
+[0.870s] creating /home/ubuntu/rs_arm/install/rs_a3_web_ui/share/rs_a3_web_ui/static/css
+[0.870s] copying static/css/style.css -> /home/ubuntu/rs_arm/install/rs_a3_web_ui/share/rs_a3_web_ui/static/css
+[0.870s] creating /home/ubuntu/rs_arm/install/rs_a3_web_ui/share/rs_a3_web_ui/static/js
+[0.870s] copying static/js/control_panel.js -> /home/ubuntu/rs_arm/install/rs_a3_web_ui/share/rs_a3_web_ui/static/js
+[0.870s] copying static/js/app.js -> /home/ubuntu/rs_arm/install/rs_a3_web_ui/share/rs_a3_web_ui/static/js
+[0.870s] copying static/js/dashboard.js -> /home/ubuntu/rs_arm/install/rs_a3_web_ui/share/rs_a3_web_ui/static/js
+[0.870s] copying static/js/robot_viewer.js -> /home/ubuntu/rs_arm/install/rs_a3_web_ui/share/rs_a3_web_ui/static/js
+[0.871s] creating /home/ubuntu/rs_arm/install/rs_a3_web_ui/share/rs_a3_web_ui/static/urdf
+[0.871s] copying static/urdf/rs_a3.urdf -> /home/ubuntu/rs_arm/install/rs_a3_web_ui/share/rs_a3_web_ui/static/urdf
+[0.871s] creating /home/ubuntu/rs_arm/install/rs_a3_web_ui/share/rs_a3_web_ui/static/urdf/meshes
+[0.871s] copying static/urdf/meshes/l5_shake.stl -> /home/ubuntu/rs_arm/install/rs_a3_web_ui/share/rs_a3_web_ui/static/urdf/meshes
+[0.871s] copying static/urdf/meshes/6705__2.stl -> /home/ubuntu/rs_arm/install/rs_a3_web_ui/share/rs_a3_web_ui/static/urdf/meshes
+[0.871s] copying static/urdf/meshes/l1_link_stop.stl -> /home/ubuntu/rs_arm/install/rs_a3_web_ui/share/rs_a3_web_ui/static/urdf/meshes
+[0.871s] copying static/urdf/meshes/rs05_l4.stl -> /home/ubuntu/rs_arm/install/rs_a3_web_ui/share/rs_a3_web_ui/static/urdf/meshes
+[0.872s] copying static/urdf/meshes/part_9.stl -> /home/ubuntu/rs_arm/install/rs_a3_web_ui/share/rs_a3_web_ui/static/urdf/meshes
+[0.872s] copying static/urdf/meshes/6705.stl -> /home/ubuntu/rs_arm/install/rs_a3_web_ui/share/rs_a3_web_ui/static/urdf/meshes
+[0.872s] copying static/urdf/meshes/rack__30_teeth.stl -> /home/ubuntu/rs_arm/install/rs_a3_web_ui/share/rs_a3_web_ui/static/urdf/meshes
+[0.872s] copying static/urdf/meshes/manifold_solid_brep_40_1.stl -> /home/ubuntu/rs_arm/install/rs_a3_web_ui/share/rs_a3_web_ui/static/urdf/meshes
+[0.872s] copying static/urdf/meshes/l4_l5_link_back__2.stl -> /home/ubuntu/rs_arm/install/rs_a3_web_ui/share/rs_a3_web_ui/static/urdf/meshes
+[0.873s] copying static/urdf/meshes/l1_base.stl -> /home/ubuntu/rs_arm/install/rs_a3_web_ui/share/rs_a3_web_ui/static/urdf/meshes
+[0.873s] copying static/urdf/meshes/rack__30_teeth__2.stl -> /home/ubuntu/rs_arm/install/rs_a3_web_ui/share/rs_a3_web_ui/static/urdf/meshes
+[0.873s] copying static/urdf/meshes/l4_l5_link_back.stl -> /home/ubuntu/rs_arm/install/rs_a3_web_ui/share/rs_a3_web_ui/static/urdf/meshes
+[0.873s] copying static/urdf/meshes/l1_link_drv.stl -> /home/ubuntu/rs_arm/install/rs_a3_web_ui/share/rs_a3_web_ui/static/urdf/meshes
+[0.874s] copying static/urdf/meshes/hand_r.stl -> /home/ubuntu/rs_arm/install/rs_a3_web_ui/share/rs_a3_web_ui/static/urdf/meshes
+[0.874s] copying static/urdf/meshes/rack_str.stl -> /home/ubuntu/rs_arm/install/rs_a3_web_ui/share/rs_a3_web_ui/static/urdf/meshes
+[0.874s] copying static/urdf/meshes/part_1.stl -> /home/ubuntu/rs_arm/install/rs_a3_web_ui/share/rs_a3_web_ui/static/urdf/meshes
+[0.875s] copying static/urdf/meshes/mainlink_back.stl -> /home/ubuntu/rs_arm/install/rs_a3_web_ui/share/rs_a3_web_ui/static/urdf/meshes
+[0.876s] copying static/urdf/meshes/l4_link_back.stl -> /home/ubuntu/rs_arm/install/rs_a3_web_ui/share/rs_a3_web_ui/static/urdf/meshes
+[0.876s] copying static/urdf/meshes/rack_base.stl -> /home/ubuntu/rs_arm/install/rs_a3_web_ui/share/rs_a3_web_ui/static/urdf/meshes
+[0.876s] copying static/urdf/meshes/rs05.stl -> /home/ubuntu/rs_arm/install/rs_a3_web_ui/share/rs_a3_web_ui/static/urdf/meshes
+[0.877s] copying static/urdf/meshes/spur_gear__14_teeth.stl -> /home/ubuntu/rs_arm/install/rs_a3_web_ui/share/rs_a3_web_ui/static/urdf/meshes
+[0.877s] copying static/urdf/meshes/l2_stop.stl -> /home/ubuntu/rs_arm/install/rs_a3_web_ui/share/rs_a3_web_ui/static/urdf/meshes
+[0.878s] copying static/urdf/meshes/rs05_l5.stl -> /home/ubuntu/rs_arm/install/rs_a3_web_ui/share/rs_a3_web_ui/static/urdf/meshes
+[0.878s] copying static/urdf/meshes/rs00_l2.stl -> /home/ubuntu/rs_arm/install/rs_a3_web_ui/share/rs_a3_web_ui/static/urdf/meshes
+[0.880s] copying static/urdf/meshes/part_2.stl -> /home/ubuntu/rs_arm/install/rs_a3_web_ui/share/rs_a3_web_ui/static/urdf/meshes
+[0.881s] copying static/urdf/meshes/mainlink_motor.stl -> /home/ubuntu/rs_arm/install/rs_a3_web_ui/share/rs_a3_web_ui/static/urdf/meshes
+[0.881s] copying static/urdf/meshes/part_15.stl -> /home/ubuntu/rs_arm/install/rs_a3_web_ui/share/rs_a3_web_ui/static/urdf/meshes
+[0.882s] copying static/urdf/meshes/manifold_solid_brep_39_1.stl -> /home/ubuntu/rs_arm/install/rs_a3_web_ui/share/rs_a3_web_ui/static/urdf/meshes
+[0.882s] copying static/urdf/meshes/l4_link_drv.stl -> /home/ubuntu/rs_arm/install/rs_a3_web_ui/share/rs_a3_web_ui/static/urdf/meshes
+[0.883s] copying static/urdf/meshes/rs00_l1.stl -> /home/ubuntu/rs_arm/install/rs_a3_web_ui/share/rs_a3_web_ui/static/urdf/meshes
+[0.885s] copying static/urdf/meshes/manifold_solid_brep_39_1__2.stl -> /home/ubuntu/rs_arm/install/rs_a3_web_ui/share/rs_a3_web_ui/static/urdf/meshes
+[0.886s] copying static/urdf/meshes/rs00_l3.stl -> /home/ubuntu/rs_arm/install/rs_a3_web_ui/share/rs_a3_web_ui/static/urdf/meshes
+[0.886s] running install_egg_info
+[0.894s] Copying ../../build/rs_a3_web_ui/rs_a3_web_ui.egg-info to /home/ubuntu/rs_arm/install/rs_a3_web_ui/lib/python3.10/site-packages/rs_a3_web_ui-1.0.0-py3.10.egg-info
+[0.895s] running install_scripts
+[0.961s] Installing web_server script to /home/ubuntu/rs_arm/install/rs_a3_web_ui/lib/rs_a3_web_ui
+[0.961s] writing list of installed files to '/home/ubuntu/rs_arm/build/rs_a3_web_ui/install.log'
+[0.976s] Invoked command in '/home/ubuntu/rs_arm/src/rs_a3_web_ui' returned '0': PYTHONPATH=/home/ubuntu/rs_arm/build/rs_a3_web_ui/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ubuntu/rs_arm/install/rs_a3_web_ui/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/rs_a3_web_ui build --build-base /home/ubuntu/rs_arm/build/rs_a3_web_ui/build install --record /home/ubuntu/rs_arm/build/rs_a3_web_ui/install.log --single-version-externally-managed install_data

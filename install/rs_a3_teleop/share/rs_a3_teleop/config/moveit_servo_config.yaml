@@ -1,0 +1,60 @@
+# MoveIt Servo配置
+# 用于RS-A3机械臂的实时伺服控制
+
+servo_node:
+  ros__parameters:
+    # 规划组名称
+    move_group_name: arm
+    
+    # 坐标系
+    planning_frame: base_link
+    ee_frame_name: L6
+    
+    # 发布频率
+    publish_period: 0.034  # 约30 Hz
+    
+    # 输入话题
+    command_in_type: "unitless"  # 接受单位化的命令
+    scale:
+      # 线性和角速度缩放
+      linear: 0.4   # 线性速度缩放
+      rotational: 0.8  # 角速度缩放
+      joint: 0.5   # 关节速度缩放
+    
+    # 低通滤波器插件
+    low_pass_filter_coeff: 2.0  # 滤波系数，越小越平滑但延迟越大
+    
+    # 碰撞检查
+    check_collisions: false  # 设为true以启用碰撞检查（会增加计算量）
+    collision_check_rate: 10.0  # Hz
+    
+    # 奇异性和关节限制检查
+    lower_singularity_threshold: 17.0  # 奇异性阈值
+    hard_stop_singularity_threshold: 30.0
+    leaving_singularity_threshold_multiplier: 2.0
+    
+    # 关节限制
+    joint_limit_margin: 0.1  # 弧度，距离关节限制的安全余量
+    
+    # 速度限制
+    override_velocity_scaling_factor: 0.0  # 0表示使用默认值
+    
+    # 其他设置
+    halt_all_joints_in_joint_mode: true
+    halt_all_joints_in_cartesian_mode: false
+    
+    # 发布话题
+    status_topic: ~/status
+    
+    # 命令超时
+    incoming_command_timeout: 0.1  # 秒，超过此时间未收到命令则停止
+
+# 控制器配置
+controller_manager:
+  ros__parameters:
+    update_rate: 100  # Hz
+
+
+
+
+

@@ -1,0 +1,4 @@
+source;share/rs_a3_urdf_legacy/local_setup.bash
+source;share/rs_a3_urdf_legacy/local_setup.dsv
+source;share/rs_a3_urdf_legacy/local_setup.sh
+source;share/rs_a3_urdf_legacy/local_setup.zsh

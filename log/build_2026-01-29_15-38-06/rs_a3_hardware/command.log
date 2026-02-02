@@ -1,0 +1,4 @@
+Invoking command in '/home/ubuntu/rs_arm/build/rs_a3_hardware': CMAKE_PREFIX_PATH=/opt/ros/humble /home/ubuntu/.local/bin/cmake --build /home/ubuntu/rs_arm/build/rs_a3_hardware -- -j24 -l24
+Invoked command in '/home/ubuntu/rs_arm/build/rs_a3_hardware' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /home/ubuntu/.local/bin/cmake --build /home/ubuntu/rs_arm/build/rs_a3_hardware -- -j24 -l24
+Invoking command in '/home/ubuntu/rs_arm/build/rs_a3_hardware': CMAKE_PREFIX_PATH=/opt/ros/humble /home/ubuntu/.local/bin/cmake --install /home/ubuntu/rs_arm/build/rs_a3_hardware
+Invoked command in '/home/ubuntu/rs_arm/build/rs_a3_hardware' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /home/ubuntu/.local/bin/cmake --install /home/ubuntu/rs_arm/build/rs_a3_hardware

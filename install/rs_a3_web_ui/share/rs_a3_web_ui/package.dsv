@@ -1,0 +1,6 @@
+source;share/rs_a3_web_ui/hook/pythonpath.ps1
+source;share/rs_a3_web_ui/hook/pythonpath.dsv
+source;share/rs_a3_web_ui/hook/pythonpath.sh
+source;share/rs_a3_web_ui/hook/ament_prefix_path.ps1
+source;share/rs_a3_web_ui/hook/ament_prefix_path.dsv
+source;share/rs_a3_web_ui/hook/ament_prefix_path.sh

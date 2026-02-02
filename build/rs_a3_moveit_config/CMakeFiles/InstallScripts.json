@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/ubuntu/rs_arm/build/rs_a3_moveit_config/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

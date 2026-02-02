@@ -1,0 +1,23 @@
+[0.631s] Invoking command in '/home/ubuntu/rs_arm/src/rs_a3_web_ui': PYTHONPATH=/home/ubuntu/rs_arm/build/rs_a3_web_ui/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ubuntu/rs_arm/install/rs_a3_web_ui/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/rs_a3_web_ui build --build-base /home/ubuntu/rs_arm/build/rs_a3_web_ui/build install --record /home/ubuntu/rs_arm/build/rs_a3_web_ui/install.log --single-version-externally-managed install_data
+[0.754s] /home/ubuntu/.local/lib/python3.10/site-packages/setuptools/_distutils/dist.py:289: UserWarning: Unknown distribution option: 'tests_require'
+[0.754s]   warnings.warn(msg)
+[0.812s] running egg_info
+[0.820s] writing ../../build/rs_a3_web_ui/rs_a3_web_ui.egg-info/PKG-INFO
+[0.822s] writing dependency_links to ../../build/rs_a3_web_ui/rs_a3_web_ui.egg-info/dependency_links.txt
+[0.822s] writing entry points to ../../build/rs_a3_web_ui/rs_a3_web_ui.egg-info/entry_points.txt
+[0.823s] writing requirements to ../../build/rs_a3_web_ui/rs_a3_web_ui.egg-info/requires.txt
+[0.823s] writing top-level names to ../../build/rs_a3_web_ui/rs_a3_web_ui.egg-info/top_level.txt
+[0.846s] reading manifest file '../../build/rs_a3_web_ui/rs_a3_web_ui.egg-info/SOURCES.txt'
+[0.847s] writing manifest file '../../build/rs_a3_web_ui/rs_a3_web_ui.egg-info/SOURCES.txt'
+[0.847s] running build
+[0.847s] running build_py
+[0.848s] running install
+[0.850s] running install_lib
+[0.860s] running install_data
+[0.861s] running install_egg_info
+[0.872s] removing '/home/ubuntu/rs_arm/install/rs_a3_web_ui/lib/python3.10/site-packages/rs_a3_web_ui-1.0.0-py3.10.egg-info' (and everything under it)
+[0.872s] Copying ../../build/rs_a3_web_ui/rs_a3_web_ui.egg-info to /home/ubuntu/rs_arm/install/rs_a3_web_ui/lib/python3.10/site-packages/rs_a3_web_ui-1.0.0-py3.10.egg-info
+[0.873s] running install_scripts
+[0.945s] Installing web_server script to /home/ubuntu/rs_arm/install/rs_a3_web_ui/lib/rs_a3_web_ui
+[0.945s] writing list of installed files to '/home/ubuntu/rs_arm/build/rs_a3_web_ui/install.log'
+[0.962s] Invoked command in '/home/ubuntu/rs_arm/src/rs_a3_web_ui' returned '0': PYTHONPATH=/home/ubuntu/rs_arm/build/rs_a3_web_ui/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ubuntu/rs_arm/install/rs_a3_web_ui/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/rs_a3_web_ui build --build-base /home/ubuntu/rs_arm/build/rs_a3_web_ui/build install --record /home/ubuntu/rs_arm/build/rs_a3_web_ui/install.log --single-version-externally-managed install_data

@@ -1,0 +1,636 @@
+<?xml version="1.0" ?>
+<!-- RS-A3 6-DOF Robot Arm URDF with ros2_control support -->
+<robot name="RS-A3" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <!-- Arguments -->
+  <xacro:arg name="use_mock_hardware" default="false"/>
+  <xacro:arg name="can_interface" default="can0"/>
+  <xacro:arg name="host_can_id" default="253"/>
+  
+  <!-- Include ros2_control -->
+  <xacro:include filename="$(find rs_a3_description)/urdf/rs_a3_ros2_control.xacro"/>
+
+  <!-- Materials -->
+  <material name="orange">
+    <color rgba="0.972549 0.529412 0.00392157 1"/>
+  </material>
+  <material name="gray">
+    <color rgba="0.647059 0.647059 0.647059 1"/>
+  </material>
+  <material name="light_blue">
+    <color rgba="0.768627 0.886275 0.952941 1"/>
+  </material>
+  <material name="white">
+    <color rgba="0.917647 0.917647 0.917647 1"/>
+  </material>
+  <material name="dark_gray">
+    <color rgba="0.301961 0.301961 0.301961 1"/>
+  </material>
+  <material name="blue">
+    <color rgba="0.231373 0.380392 0.705882 1"/>
+  </material>
+  <material name="yellow">
+    <color rgba="0.980392 0.713725 0.00392157 1"/>
+  </material>
+
+  <!-- Base link (world) -->
+  <link name="base_link"/>
+  
+  <joint name="base_to_l1" type="fixed">
+    <parent link="base_link"/>
+    <child link="l1_urdf_urdf_asm"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </joint>
+
+  <!-- Link l1_urdf_urdf_asm (Base) -->
+  <link name="l1_urdf_urdf_asm">
+    <inertial>
+      <origin xyz="-0.000473642 -3.66697e-05 -0.0209915" rpy="0 0 0"/>
+      <mass value="0.410786"/>
+      <inertia ixx="0.000243951" ixy="-2.931e-09" ixz="-2.71862e-06" 
+               iyy="0.000233462" iyz="5.03989e-07" izz="0.000256472"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://rs_a3_description/meshes/rs00_l1.stl"/>
+      </geometry>
+      <material name="orange"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://rs_a3_description/meshes/rs00_l1.stl"/>
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://rs_a3_description/meshes/l1_base.stl"/>
+      </geometry>
+      <material name="gray"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://rs_a3_description/meshes/l1_base.stl"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <!-- Link l1_link_urdf_asm -->
+  <link name="l1_link_urdf_asm">
+    <inertial>
+      <origin xyz="-0.00670261 -0.000377334 0.0342178" rpy="0 0 0"/>
+      <mass value="0.140779"/>
+      <inertia ixx="0.000189723" ixy="-1.61467e-06" ixz="1.97828e-05" 
+               iyy="0.000112632" iyz="3.73644e-06" izz="0.00016217"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 -0.0054" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://rs_a3_description/meshes/l1_link_stop.stl"/>
+      </geometry>
+      <material name="light_blue"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.0054" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://rs_a3_description/meshes/l1_link_stop.stl"/>
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="0 0 -0.0054" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://rs_a3_description/meshes/l1_link_drv.stl"/>
+      </geometry>
+      <material name="light_blue"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.0054" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://rs_a3_description/meshes/l1_link_drv.stl"/>
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="0 0 -0.0054" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://rs_a3_description/meshes/l2_stop.stl"/>
+      </geometry>
+      <material name="orange"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.0054" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://rs_a3_description/meshes/l2_stop.stl"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <!-- Link l2_l3_urdf_asm -->
+  <link name="l2_l3_urdf_asm">
+    <inertial>
+      <origin xyz="0.095 -3.5032e-07 -0.000569607" rpy="0 0 0"/>
+      <mass value="0.83477"/>
+      <inertia ixx="0.000411892" ixy="-2.68928e-08" ixz="8.18489e-11" 
+               iyy="0.0070909" iyz="-4.27746e-09" izz="0.00710532"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.0176846 -0.066 0.0005" rpy="-1.5708 0 0"/>
+      <geometry>
+        <mesh filename="package://rs_a3_description/meshes/mainlink_back.stl"/>
+      </geometry>
+      <material name="gray"/>
+    </visual>
+    <collision>
+      <origin xyz="0.0176846 -0.066 0.0005" rpy="-1.5708 0 0"/>
+      <geometry>
+        <mesh filename="package://rs_a3_description/meshes/mainlink_back.stl"/>
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="0.0176846 -0.066 0.0005" rpy="-1.5708 0 0"/>
+      <geometry>
+        <mesh filename="package://rs_a3_description/meshes/6705.stl"/>
+      </geometry>
+      <material name="white"/>
+    </visual>
+    <collision>
+      <origin xyz="0.0176846 -0.066 0.0005" rpy="-1.5708 0 0"/>
+      <geometry>
+        <mesh filename="package://rs_a3_description/meshes/6705.stl"/>
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="0.0176846 -0.066 0" rpy="-1.5708 0 0"/>
+      <geometry>
+        <mesh filename="package://rs_a3_description/meshes/rs00_l2.stl"/>
+      </geometry>
+      <material name="orange"/>
+    </visual>
+    <collision>
+      <origin xyz="0.0176846 -0.066 0" rpy="-1.5708 0 0"/>
+      <geometry>
+        <mesh filename="package://rs_a3_description/meshes/rs00_l2.stl"/>
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="0.0176846 -0.066 0" rpy="-1.5708 0 0"/>
+      <geometry>
+        <mesh filename="package://rs_a3_description/meshes/mainlink_motor.stl"/>
+      </geometry>
+      <material name="gray"/>
+    </visual>
+    <collision>
+      <origin xyz="0.0176846 -0.066 0" rpy="-1.5708 0 0"/>
+      <geometry>
+        <mesh filename="package://rs_a3_description/meshes/mainlink_motor.stl"/>
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="0.0176846 -0.066 0.0005" rpy="-1.5708 0 0"/>
+      <geometry>
+        <mesh filename="package://rs_a3_description/meshes/6705__2.stl"/>
+      </geometry>
+      <material name="blue"/>
+    </visual>
+    <collision>
+      <origin xyz="0.0176846 -0.066 0.0005" rpy="-1.5708 0 0"/>
+      <geometry>
+        <mesh filename="package://rs_a3_description/meshes/6705__2.stl"/>
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="0.0176846 -0.066 0" rpy="-1.5708 0 0"/>
+      <geometry>
+        <mesh filename="package://rs_a3_description/meshes/rs00_l3.stl"/>
+      </geometry>
+      <material name="orange"/>
+    </visual>
+    <collision>
+      <origin xyz="0.0176846 -0.066 0" rpy="-1.5708 0 0"/>
+      <geometry>
+        <mesh filename="package://rs_a3_description/meshes/rs00_l3.stl"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <!-- Link l3_lnik_urdf_asm -->
+  <link name="l3_lnik_urdf_asm">
+    <inertial>
+      <origin xyz="-0.055871 0.0492802 0.0027754" rpy="0 0 0"/>
+      <mass value="0.197637"/>
+      <inertia ixx="0.000241191" ixy="0.000108757" ixz="-7.09292e-06" 
+               iyy="0.000663739" iyz="6.85788e-06" izz="0.000641507"/>
+    </inertial>
+    <visual>
+      <origin xyz="-0.172315 -0.066 0" rpy="-1.5708 0 0"/>
+      <geometry>
+        <mesh filename="package://rs_a3_description/meshes/l4_link_back.stl"/>
+      </geometry>
+      <material name="dark_gray"/>
+    </visual>
+    <collision>
+      <origin xyz="-0.172315 -0.066 0" rpy="-1.5708 0 0"/>
+      <geometry>
+        <mesh filename="package://rs_a3_description/meshes/l4_link_back.stl"/>
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="-0.172315 -0.066 0" rpy="-1.5708 0 0"/>
+      <geometry>
+        <mesh filename="package://rs_a3_description/meshes/l4_link_drv.stl"/>
+      </geometry>
+      <material name="dark_gray"/>
+    </visual>
+    <collision>
+      <origin xyz="-0.172315 -0.066 0" rpy="-1.5708 0 0"/>
+      <geometry>
+        <mesh filename="package://rs_a3_description/meshes/l4_link_drv.stl"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <!-- Link l4_l5_urdf_asm -->
+  <link name="l4_l5_urdf_asm">
+    <inertial>
+      <origin xyz="-0.0242557 0.0305328 -0.000278918" rpy="0 0 0"/>
+      <mass value="0.46061"/>
+      <inertia ixx="0.000570996" ixy="0.000329291" ixz="3.22513e-06" 
+               iyy="0.000412235" iyz="-4.05021e-06" izz="0.000827873"/>
+    </inertial>
+    <visual>
+      <origin xyz="-0.0223154 -0.126 0" rpy="-1.5708 0 0"/>
+      <geometry>
+        <mesh filename="package://rs_a3_description/meshes/rs05_l5.stl"/>
+      </geometry>
+      <material name="white"/>
+    </visual>
+    <collision>
+      <origin xyz="-0.0223154 -0.126 0" rpy="-1.5708 0 0"/>
+      <geometry>
+        <mesh filename="package://rs_a3_description/meshes/rs05_l5.stl"/>
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="-0.0223154 -0.126 0" rpy="-1.5708 0 0"/>
+      <geometry>
+        <mesh filename="package://rs_a3_description/meshes/l4_l5_link_back.stl"/>
+      </geometry>
+      <material name="white"/>
+    </visual>
+    <collision>
+      <origin xyz="-0.0223154 -0.126 0" rpy="-1.5708 0 0"/>
+      <geometry>
+        <mesh filename="package://rs_a3_description/meshes/l4_l5_link_back.stl"/>
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="-0.0223154 -0.126 0" rpy="-1.5708 0 0"/>
+      <geometry>
+        <mesh filename="package://rs_a3_description/meshes/l5_shake.stl"/>
+      </geometry>
+      <material name="light_blue"/>
+    </visual>
+    <collision>
+      <origin xyz="-0.0223154 -0.126 0" rpy="-1.5708 0 0"/>
+      <geometry>
+        <mesh filename="package://rs_a3_description/meshes/l5_shake.stl"/>
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="-0.0223154 -0.126 0" rpy="-1.5708 0 0"/>
+      <geometry>
+        <mesh filename="package://rs_a3_description/meshes/l4_l5_link_back__2.stl"/>
+      </geometry>
+      <material name="orange"/>
+    </visual>
+    <collision>
+      <origin xyz="-0.0223154 -0.126 0" rpy="-1.5708 0 0"/>
+      <geometry>
+        <mesh filename="package://rs_a3_description/meshes/l4_l5_link_back__2.stl"/>
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="-0.0223154 -0.126 0" rpy="-1.5708 0 0"/>
+      <geometry>
+        <mesh filename="package://rs_a3_description/meshes/rs05_l4.stl"/>
+      </geometry>
+      <material name="white"/>
+    </visual>
+    <collision>
+      <origin xyz="-0.0223154 -0.126 0" rpy="-1.5708 0 0"/>
+      <geometry>
+        <mesh filename="package://rs_a3_description/meshes/rs05_l4.stl"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <!-- Link part_9 -->
+  <link name="part_9">
+    <inertial>
+      <origin xyz="0.00409925 0 0.0175115" rpy="0 0 0"/>
+      <mass value="0.0179604"/>
+      <inertia ixx="5.21557e-06" ixy="0" ixz="-1.22439e-06" 
+               iyy="5.09769e-06" iyz="0" izz="2.51483e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.0268846 0 0.164" rpy="3.14159 0 0"/>
+      <geometry>
+        <mesh filename="package://rs_a3_description/meshes/part_9.stl"/>
+      </geometry>
+      <material name="orange"/>
+    </visual>
+    <collision>
+      <origin xyz="0.0268846 0 0.164" rpy="3.14159 0 0"/>
+      <geometry>
+        <mesh filename="package://rs_a3_description/meshes/part_9.stl"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <!-- Link l5_l6_urdf_asm (End Effector) -->
+  <link name="l5_l6_urdf_asm">
+    <inertial>
+      <origin xyz="-1.18731e-05 -0.000611886 0.0702025" rpy="0 0 0"/>
+      <mass value="0.53126"/>
+      <inertia ixx="0.00100377" ixy="4.96962e-06" ixz="-1.08455e-07" 
+               iyy="0.00139938" iyz="1.67389e-05" izz="0.000542"/>
+    </inertial>
+    <!-- Part part_2 -->
+    <visual>
+      <origin xyz="0 0 0.062" rpy="0 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://rs_a3_description/meshes/part_2.stl"/>
+      </geometry>
+      <material name="gray"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0.062" rpy="0 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://rs_a3_description/meshes/part_2.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part hand_r -->
+    <visual>
+      <origin xyz="0 0 0.0755" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://rs_a3_description/meshes/hand_r.stl"/>
+      </geometry>
+      <material name="blue"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0.0755" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://rs_a3_description/meshes/hand_r.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part rs05 -->
+    <visual>
+      <origin xyz="0 0 0.0755" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://rs_a3_description/meshes/rs05.stl"/>
+      </geometry>
+      <material name="white"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0.0755" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://rs_a3_description/meshes/rs05.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part rack__30_teeth -->
+    <visual>
+      <origin xyz="0 0 0.0755" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://rs_a3_description/meshes/rack__30_teeth.stl"/>
+      </geometry>
+      <material name="white"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0.0755" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://rs_a3_description/meshes/rack__30_teeth.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part manifold_solid_brep_39_1 -->
+    <visual>
+      <origin xyz="0.003 0 0.0755" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://rs_a3_description/meshes/manifold_solid_brep_39_1.stl"/>
+      </geometry>
+      <material name="yellow"/>
+    </visual>
+    <collision>
+      <origin xyz="0.003 0 0.0755" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://rs_a3_description/meshes/manifold_solid_brep_39_1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part rack__30_teeth_2 -->
+    <visual>
+      <origin xyz="0 0 0.0755" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://rs_a3_description/meshes/rack__30_teeth__2.stl"/>
+      </geometry>
+      <material name="white"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0.0755" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://rs_a3_description/meshes/rack__30_teeth__2.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part manifold_solid_brep_39_1_2 -->
+    <visual>
+      <origin xyz="-0.003 0 0.0755" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://rs_a3_description/meshes/manifold_solid_brep_39_1__2.stl"/>
+      </geometry>
+      <material name="yellow"/>
+    </visual>
+    <collision>
+      <origin xyz="-0.003 0 0.0755" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://rs_a3_description/meshes/manifold_solid_brep_39_1__2.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part rack_base -->
+    <visual>
+      <origin xyz="0 0 0.0755" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://rs_a3_description/meshes/rack_base.stl"/>
+      </geometry>
+      <material name="light_blue"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0.0755" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://rs_a3_description/meshes/rack_base.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part rack_str -->
+    <visual>
+      <origin xyz="0 0 0.0755" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://rs_a3_description/meshes/rack_str.stl"/>
+      </geometry>
+      <material name="light_blue"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0.0755" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://rs_a3_description/meshes/rack_str.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part part_1 -->
+    <visual>
+      <origin xyz="0 0 0.062" rpy="0 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://rs_a3_description/meshes/part_1.stl"/>
+      </geometry>
+      <material name="light_blue"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0.062" rpy="0 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://rs_a3_description/meshes/part_1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part rs05_2 -->
+    <visual>
+      <origin xyz="0 0 0.0305" rpy="3.14159 0 0"/>
+      <geometry>
+        <mesh filename="package://rs_a3_description/meshes/rs05.stl"/>
+      </geometry>
+      <material name="white"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0.0305" rpy="3.14159 0 0"/>
+      <geometry>
+        <mesh filename="package://rs_a3_description/meshes/rs05.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part spur_gear__14_teeth -->
+    <visual>
+      <origin xyz="0 0 0.0755" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://rs_a3_description/meshes/spur_gear__14_teeth.stl"/>
+      </geometry>
+      <material name="white"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0.0755" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://rs_a3_description/meshes/spur_gear__14_teeth.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part part_15 -->
+    <visual>
+      <origin xyz="0 0 0.0755" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://rs_a3_description/meshes/part_15.stl"/>
+      </geometry>
+      <material name="blue"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0.0755" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://rs_a3_description/meshes/part_15.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part manifold_solid_brep_40_1 -->
+    <visual>
+      <origin xyz="0 0 0.0755" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://rs_a3_description/meshes/manifold_solid_brep_40_1.stl"/>
+      </geometry>
+      <material name="gray"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0.0755" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://rs_a3_description/meshes/manifold_solid_brep_40_1.stl"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <!-- End Effector link -->
+  <link name="end_effector"/>
+
+  <!-- Joints -->
+  <!-- Joint L1 (RS00 Motor 1) -->
+  <joint name="L1_joint" type="revolute">
+    <origin xyz="0 0 0.0054" rpy="0 0 0"/>
+    <parent link="l1_urdf_urdf_asm"/>
+    <child link="l1_link_urdf_asm"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="14" velocity="33" lower="-6.28" upper="6.28"/>
+    <dynamics damping="0.1" friction="0.1"/>
+  </joint>
+
+  <!-- Joint L2 (RS00 Motor 2) -->
+  <joint name="L2_joint" type="revolute">
+    <origin xyz="-0.0176846 0 0.0606" rpy="1.5708 0 0"/>
+    <parent link="l1_link_urdf_asm"/>
+    <child link="l2_l3_urdf_asm"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="14" velocity="33" lower="-6.28" upper="6.28"/>
+    <dynamics damping="0.1" friction="0.1"/>
+  </joint>
+
+  <!-- Joint L3 (RS00 Motor 3) -->
+  <joint name="L3_joint" type="revolute">
+    <origin xyz="0.19 0 0" rpy="0 0 0"/>
+    <parent link="l2_l3_urdf_asm"/>
+    <child link="l3_lnik_urdf_asm"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="14" velocity="33" lower="-6.28" upper="6.28"/>
+    <dynamics damping="0.1" friction="0.1"/>
+  </joint>
+
+  <!-- Joint L4 (RS05 Motor 4) -->
+  <joint name="L4_joint" type="revolute">
+    <origin xyz="-0.15 0.06 0" rpy="0 0 0"/>
+    <parent link="l3_lnik_urdf_asm"/>
+    <child link="l4_l5_urdf_asm"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="5.5" velocity="50" lower="-6.28" upper="6.28"/>
+    <dynamics damping="0.05" friction="0.05"/>
+  </joint>
+
+  <!-- Joint L5 (RS05 Motor 5) -->
+  <joint name="L5_joint" type="revolute">
+    <origin xyz="-0.0492 0.038 0" rpy="1.5708 0 0"/>
+    <parent link="l4_l5_urdf_asm"/>
+    <child link="part_9"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="5.5" velocity="50" lower="-6.28" upper="6.28"/>
+    <dynamics damping="0.05" friction="0.05"/>
+  </joint>
+
+  <!-- Joint L6 (RS05 Motor 6) -->
+  <joint name="L6_joint" type="revolute">
+    <origin xyz="0.00805 0 0.038" rpy="1.5708 0 -1.5708"/>
+    <parent link="part_9"/>
+    <child link="l5_l6_urdf_asm"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="5.5" velocity="50" lower="-6.28" upper="6.28"/>
+    <dynamics damping="0.05" friction="0.05"/>
+  </joint>
+
+  <!-- End Effector joint -->
+  <joint name="end_effector_joint" type="fixed">
+    <origin xyz="0 0 0.074" rpy="0 0 0"/>
+    <parent link="l5_l6_urdf_asm"/>
+    <child link="end_effector"/>
+  </joint>
+
+  <!-- ros2_control interface -->
+  <xacro:rs_a3_ros2_control 
+    use_mock_hardware="$(arg use_mock_hardware)"
+    can_interface="$(arg can_interface)"
+    host_can_id="$(arg host_can_id)"/>
+
+</robot>
+

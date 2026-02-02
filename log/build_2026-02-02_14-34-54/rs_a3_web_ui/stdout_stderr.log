@@ -1,0 +1,21 @@
+/home/ubuntu/.local/lib/python3.10/site-packages/setuptools/_distutils/dist.py:289: UserWarning: Unknown distribution option: 'tests_require'
+  warnings.warn(msg)
+running egg_info
+writing ../../build/rs_a3_web_ui/rs_a3_web_ui.egg-info/PKG-INFO
+writing dependency_links to ../../build/rs_a3_web_ui/rs_a3_web_ui.egg-info/dependency_links.txt
+writing entry points to ../../build/rs_a3_web_ui/rs_a3_web_ui.egg-info/entry_points.txt
+writing requirements to ../../build/rs_a3_web_ui/rs_a3_web_ui.egg-info/requires.txt
+writing top-level names to ../../build/rs_a3_web_ui/rs_a3_web_ui.egg-info/top_level.txt
+reading manifest file '../../build/rs_a3_web_ui/rs_a3_web_ui.egg-info/SOURCES.txt'
+writing manifest file '../../build/rs_a3_web_ui/rs_a3_web_ui.egg-info/SOURCES.txt'
+running build
+running build_py
+running install
+running install_lib
+running install_data
+running install_egg_info
+removing '/home/ubuntu/rs_arm/install/rs_a3_web_ui/lib/python3.10/site-packages/rs_a3_web_ui-1.0.0-py3.10.egg-info' (and everything under it)
+Copying ../../build/rs_a3_web_ui/rs_a3_web_ui.egg-info to /home/ubuntu/rs_arm/install/rs_a3_web_ui/lib/python3.10/site-packages/rs_a3_web_ui-1.0.0-py3.10.egg-info
+running install_scripts
+Installing web_server script to /home/ubuntu/rs_arm/install/rs_a3_web_ui/lib/rs_a3_web_ui
+writing list of installed files to '/home/ubuntu/rs_arm/build/rs_a3_web_ui/install.log'

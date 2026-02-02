@@ -1,0 +1,56 @@
+-- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/ubuntu/rs_arm/build/rs_a3_urdf_legacy
+-- Install configuration: ""
+-- Up-to-date: /home/ubuntu/rs_arm/install/rs_a3_urdf_legacy/share/rs_a3_urdf_legacy/meshes
+-- Up-to-date: /home/ubuntu/rs_arm/install/rs_a3_urdf_legacy/share/rs_a3_urdf_legacy/meshes/l5_shake.stl
+-- Up-to-date: /home/ubuntu/rs_arm/install/rs_a3_urdf_legacy/share/rs_a3_urdf_legacy/meshes/6705__2.stl
+-- Up-to-date: /home/ubuntu/rs_arm/install/rs_a3_urdf_legacy/share/rs_a3_urdf_legacy/meshes/l1_link_stop.stl
+-- Up-to-date: /home/ubuntu/rs_arm/install/rs_a3_urdf_legacy/share/rs_a3_urdf_legacy/meshes/rs05_l4.stl
+-- Up-to-date: /home/ubuntu/rs_arm/install/rs_a3_urdf_legacy/share/rs_a3_urdf_legacy/meshes/part_9.stl
+-- Up-to-date: /home/ubuntu/rs_arm/install/rs_a3_urdf_legacy/share/rs_a3_urdf_legacy/meshes/6705.stl
+-- Up-to-date: /home/ubuntu/rs_arm/install/rs_a3_urdf_legacy/share/rs_a3_urdf_legacy/meshes/rack__30_teeth.stl
+-- Up-to-date: /home/ubuntu/rs_arm/install/rs_a3_urdf_legacy/share/rs_a3_urdf_legacy/meshes/manifold_solid_brep_40_1.stl
+-- Up-to-date: /home/ubuntu/rs_arm/install/rs_a3_urdf_legacy/share/rs_a3_urdf_legacy/meshes/l4_l5_link_back__2.stl
+-- Up-to-date: /home/ubuntu/rs_arm/install/rs_a3_urdf_legacy/share/rs_a3_urdf_legacy/meshes/l1_base.stl
+-- Up-to-date: /home/ubuntu/rs_arm/install/rs_a3_urdf_legacy/share/rs_a3_urdf_legacy/meshes/rack__30_teeth__2.stl
+-- Up-to-date: /home/ubuntu/rs_arm/install/rs_a3_urdf_legacy/share/rs_a3_urdf_legacy/meshes/l4_l5_link_back.stl
+-- Up-to-date: /home/ubuntu/rs_arm/install/rs_a3_urdf_legacy/share/rs_a3_urdf_legacy/meshes/l1_link_drv.stl
+-- Up-to-date: /home/ubuntu/rs_arm/install/rs_a3_urdf_legacy/share/rs_a3_urdf_legacy/meshes/hand_r.stl
+-- Up-to-date: /home/ubuntu/rs_arm/install/rs_a3_urdf_legacy/share/rs_a3_urdf_legacy/meshes/rack_str.stl
+-- Up-to-date: /home/ubuntu/rs_arm/install/rs_a3_urdf_legacy/share/rs_a3_urdf_legacy/meshes/part_1.stl
+-- Up-to-date: /home/ubuntu/rs_arm/install/rs_a3_urdf_legacy/share/rs_a3_urdf_legacy/meshes/mainlink_back.stl
+-- Up-to-date: /home/ubuntu/rs_arm/install/rs_a3_urdf_legacy/share/rs_a3_urdf_legacy/meshes/l4_link_back.stl
+-- Up-to-date: /home/ubuntu/rs_arm/install/rs_a3_urdf_legacy/share/rs_a3_urdf_legacy/meshes/rack_base.stl
+-- Up-to-date: /home/ubuntu/rs_arm/install/rs_a3_urdf_legacy/share/rs_a3_urdf_legacy/meshes/rs05.stl
+-- Up-to-date: /home/ubuntu/rs_arm/install/rs_a3_urdf_legacy/share/rs_a3_urdf_legacy/meshes/spur_gear__14_teeth.stl
+-- Up-to-date: /home/ubuntu/rs_arm/install/rs_a3_urdf_legacy/share/rs_a3_urdf_legacy/meshes/l2_stop.stl
+-- Up-to-date: /home/ubuntu/rs_arm/install/rs_a3_urdf_legacy/share/rs_a3_urdf_legacy/meshes/rs05_l5.stl
+-- Up-to-date: /home/ubuntu/rs_arm/install/rs_a3_urdf_legacy/share/rs_a3_urdf_legacy/meshes/rs00_l2.stl
+-- Up-to-date: /home/ubuntu/rs_arm/install/rs_a3_urdf_legacy/share/rs_a3_urdf_legacy/meshes/part_2.stl
+-- Up-to-date: /home/ubuntu/rs_arm/install/rs_a3_urdf_legacy/share/rs_a3_urdf_legacy/meshes/mainlink_motor.stl
+-- Up-to-date: /home/ubuntu/rs_arm/install/rs_a3_urdf_legacy/share/rs_a3_urdf_legacy/meshes/part_15.stl
+-- Up-to-date: /home/ubuntu/rs_arm/install/rs_a3_urdf_legacy/share/rs_a3_urdf_legacy/meshes/manifold_solid_brep_39_1.stl
+-- Up-to-date: /home/ubuntu/rs_arm/install/rs_a3_urdf_legacy/share/rs_a3_urdf_legacy/meshes/l4_link_drv.stl
+-- Up-to-date: /home/ubuntu/rs_arm/install/rs_a3_urdf_legacy/share/rs_a3_urdf_legacy/meshes/rs00_l1.stl
+-- Up-to-date: /home/ubuntu/rs_arm/install/rs_a3_urdf_legacy/share/rs_a3_urdf_legacy/meshes/manifold_solid_brep_39_1__2.stl
+-- Up-to-date: /home/ubuntu/rs_arm/install/rs_a3_urdf_legacy/share/rs_a3_urdf_legacy/meshes/rs00_l3.stl
+-- Up-to-date: /home/ubuntu/rs_arm/install/rs_a3_urdf_legacy/share/rs_a3_urdf_legacy/launch
+-- Up-to-date: /home/ubuntu/rs_arm/install/rs_a3_urdf_legacy/share/rs_a3_urdf_legacy/launch/display.launch.py
+-- Up-to-date: /home/ubuntu/rs_arm/install/rs_a3_urdf_legacy/share/rs_a3_urdf_legacy/RS-A3.urdf
+-- Up-to-date: /home/ubuntu/rs_arm/install/rs_a3_urdf_legacy/share/ament_index/resource_index/package_run_dependencies/rs_a3_urdf_legacy
+-- Up-to-date: /home/ubuntu/rs_arm/install/rs_a3_urdf_legacy/share/ament_index/resource_index/parent_prefix_path/rs_a3_urdf_legacy
+-- Up-to-date: /home/ubuntu/rs_arm/install/rs_a3_urdf_legacy/share/rs_a3_urdf_legacy/environment/ament_prefix_path.sh
+-- Installing: /home/ubuntu/rs_arm/install/rs_a3_urdf_legacy/share/rs_a3_urdf_legacy/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/ubuntu/rs_arm/install/rs_a3_urdf_legacy/share/rs_a3_urdf_legacy/environment/path.sh
+-- Installing: /home/ubuntu/rs_arm/install/rs_a3_urdf_legacy/share/rs_a3_urdf_legacy/environment/path.dsv
+-- Up-to-date: /home/ubuntu/rs_arm/install/rs_a3_urdf_legacy/share/rs_a3_urdf_legacy/local_setup.bash
+-- Up-to-date: /home/ubuntu/rs_arm/install/rs_a3_urdf_legacy/share/rs_a3_urdf_legacy/local_setup.sh
+-- Up-to-date: /home/ubuntu/rs_arm/install/rs_a3_urdf_legacy/share/rs_a3_urdf_legacy/local_setup.zsh
+-- Installing: /home/ubuntu/rs_arm/install/rs_a3_urdf_legacy/share/rs_a3_urdf_legacy/local_setup.dsv
+-- Installing: /home/ubuntu/rs_arm/install/rs_a3_urdf_legacy/share/rs_a3_urdf_legacy/package.dsv
+-- Up-to-date: /home/ubuntu/rs_arm/install/rs_a3_urdf_legacy/share/ament_index/resource_index/packages/rs_a3_urdf_legacy
+-- Up-to-date: /home/ubuntu/rs_arm/install/rs_a3_urdf_legacy/share/rs_a3_urdf_legacy/cmake/rs_a3_urdf_legacyConfig.cmake
+-- Up-to-date: /home/ubuntu/rs_arm/install/rs_a3_urdf_legacy/share/rs_a3_urdf_legacy/cmake/rs_a3_urdf_legacyConfig-version.cmake
+-- Up-to-date: /home/ubuntu/rs_arm/install/rs_a3_urdf_legacy/share/rs_a3_urdf_legacy/package.xml
